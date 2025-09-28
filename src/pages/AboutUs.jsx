@@ -1,0 +1,487 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  FiUsers, 
+  FiAward, 
+  FiTarget, 
+  FiHeart,
+  FiShield,
+  FiTrendingUp,
+  FiCheck,
+  FiMapPin
+} from 'react-icons/fi';
+import UnderConstruction from '../components/common/UnderConstruction';
+
+const AboutUs = () => {
+  const [showUnderConstruction, setShowUnderConstruction] = useState(true);
+
+  // Show UnderConstruction page if enabled
+  if (showUnderConstruction) {
+    return (
+      <UnderConstruction
+        title="About Us Page Under Construction"
+        subtitle="We're crafting our story to share with you!"
+        description="Our About Us page is currently being enhanced with detailed company history, team profiles, and our commitment to excellence. We're working hard to provide you with comprehensive information about Alcoa Scaffolding's journey and values."
+        showContactInfo={true}
+      />
+    );
+  }
+
+  const stats = [
+    { number: '15+', label: 'Years Experience', icon: FiAward },
+    { number: '500+', label: 'Projects Completed', icon: FiTarget },
+    { number: '50+', label: 'Expert Team Members', icon: FiUsers },
+    { number: '98%', label: 'Client Satisfaction', icon: FiHeart }
+  ];
+
+  const timeline = [
+    {
+      year: '2008',
+      title: 'Company Founded',
+      description: 'Started as a small family business with a vision to provide safer scaffolding solutions.'
+    },
+    {
+      year: '2012',
+      title: 'First Major Contract',
+      description: 'Secured our first commercial project with a major construction company in Abu Dhabi.'
+    },
+    {
+      year: '2015',
+      title: 'Safety Certification',
+      description: 'Achieved advanced safety certifications and became industry leaders in safety protocols.'
+    },
+    {
+      year: '2018',
+      title: 'National Expansion',
+      description: 'Expanded operations across UAE with offices in major cities.'
+    },
+    {
+      year: '2020',
+      title: 'Innovation Award',
+      description: 'Received industry recognition for innovative scaffolding solutions and safety practices.'
+    },
+    {
+      year: '2023',
+      title: 'Sustainable Practices',
+      description: 'Launched eco-friendly initiatives and sustainable scaffolding practices.'
+    }
+  ];
+
+  const values = [
+    {
+      icon: FiShield,
+      title: 'Safety First',
+      description: 'Safety is never compromised. Every project begins with comprehensive risk assessment and safety planning.'
+    },
+    {
+      icon: FiAward,
+      title: 'Quality Excellence',
+      description: 'We use only premium materials and maintain the highest standards in all our services.'
+    },
+    {
+      icon: FiUsers,
+      title: 'Customer Focus',
+      description: 'Our clients\' success is our success. We work closely with you to achieve your project goals.'
+    },
+    {
+      icon: FiTrendingUp,
+      title: 'Innovation',
+      description: 'We continuously invest in new technologies and methods to improve our services.'
+    }
+  ];
+
+  const team = [
+    {
+      name: 'John Mitchell',
+      role: 'CEO & Founder',
+      experience: '20+ years',
+      specialization: 'Strategic Leadership',
+      image: 'john-mitchell'
+    },
+    {
+      name: 'Sarah Chen',
+      role: 'Operations Director',
+      experience: '15+ years',
+      specialization: 'Project Management',
+      image: 'sarah-chen'
+    },
+    {
+      name: 'Michael Rodriguez',
+      role: 'Safety Director',
+      experience: '18+ years',
+      specialization: 'Safety & Compliance',
+      image: 'michael-rodriguez'
+    },
+    {
+      name: 'Emma Thompson',
+      role: 'Technical Manager',
+      experience: '12+ years',
+      specialization: 'Engineering Solutions',
+      image: 'emma-thompson'
+    }
+  ];
+
+  const certifications = [
+    'AS/NZS 1576.1 Scaffolding Standard',
+    'WorkSafe UAE Certified',
+    'ISO 9001 Quality Management',
+    'ISO 14001 Environmental Management',
+    'OHSAS 18001 Safety Management',
+    'Master Builders Association Member'
+  ];
+
+  return (
+    <div className="min-h-screen bg-surface-light dark:bg-surface-dark transition-theme">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-brand-primary-50 to-brand-accent-50 dark:from-brand-primary-950 dark:to-brand-accent-950 py-16 lg:py-24 transition-theme">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-4xl lg:text-6xl font-bold text-text-primary dark:text-text-primary-dark mb-6">
+              About 
+              <span className="text-gradient"> Alcoa Scaffolding</span>
+            </h1>
+            <p className="text-lg lg:text-xl text-text-secondary dark:text-text-secondary-dark mb-8">
+              Building UAE's future, one scaffold at a time. Since 2008, we've been 
+              the trusted partner for construction professionals across the nation.
+            </p>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16"
+          >
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-surface-light dark:bg-surface-muted-dark rounded-full shadow-lg flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-brand-primary-600 dark:text-brand-primary-400" />
+                </div>
+                <div className="text-3xl lg:text-4xl font-bold text-text-primary dark:text-text-primary-dark mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-text-secondary dark:text-text-secondary-dark">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                Our Story
+              </h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  Founded in 2008 by John Mitchell, Alcoa Aluminium Scaffolding began as a 
+                  small family business with a big vision: to revolutionize the scaffolding 
+                  industry in UAE through innovative solutions and unwavering commitment to safety.
+                </p>
+                <p>
+                  What started as a two-person operation has grown into one of UAE's 
+                  most trusted scaffolding companies, serving clients from residential 
+                  homeowners to major construction corporations. Our success is built on 
+                  three fundamental principles: safety, quality, and customer satisfaction.
+                </p>
+                <p>
+                  Today, we're proud to have completed over 500 projects across UAE, 
+                  maintaining a 98% customer satisfaction rate and zero major safety incidents. 
+                  Our team of 50+ certified professionals continues to push the boundaries 
+                  of what's possible in scaffolding solutions.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              {/* Company Image Placeholder */}
+              <div className="aspect-square bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl overflow-hidden">
+                <div className="w-full h-full flex items-center justify-center">
+                  <svg className="w-32 h-32 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+              </div>
+
+              {/* Floating Achievement Card */}
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-6 border border-gray-100">
+                <div className="flex items-center space-x-3">
+                  <FiAward className="w-8 h-8 text-accent-500" />
+                  <div>
+                    <div className="font-bold text-gray-900">Industry Leader</div>
+                    <div className="text-sm text-gray-600">Safety Excellence Award 2023</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="section-padding bg-aluminum-50">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Our Journey
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Milestones that shaped our company and the scaffolding industry in UAE.
+            </p>
+          </motion.div>
+
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary-200"></div>
+
+            <div className="space-y-12">
+              {timeline.map((event, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`flex items-center ${
+                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  }`}
+                >
+                  <div className="flex-1 px-8">
+                    <div className={`card ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                      <div className="text-2xl font-bold text-primary-600 mb-2">
+                        {event.year}
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                        {event.title}
+                      </h3>
+                      <p className="text-gray-600">
+                        {event.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Timeline Node */}
+                  <div className="w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+
+                  <div className="flex-1 px-8"></div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Our Values
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              The principles that guide everything we do and shape our company culture.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <value.icon className="w-8 h-8 text-primary-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {value.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="section-padding bg-aluminum-50">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Leadership Team
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Meet the experienced professionals who lead our company and drive our success.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="card text-center hover:shadow-xl transition-all duration-300"
+              >
+                {/* Team Member Photo */}
+                <div className="w-24 h-24 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-primary-700">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-bold text-gray-900 mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-primary-600 font-medium mb-2">
+                  {member.role}
+                </p>
+                <div className="text-sm text-gray-600 space-y-1">
+                  <p>{member.experience}</p>
+                  <p className="font-medium">{member.specialization}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                Certifications & Compliance
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                We maintain the highest industry standards through rigorous certification 
+                processes and ongoing compliance monitoring.
+              </p>
+
+              <div className="space-y-3">
+                {certifications.map((cert, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center space-x-3"
+                  >
+                    <FiCheck className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">{cert}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="grid grid-cols-2 gap-6"
+            >
+              {/* Certification Badges */}
+              {[
+                { name: 'Safety First', icon: FiShield, color: 'bg-green-100 text-green-600' },
+                { name: 'Quality Assured', icon: FiAward, color: 'bg-blue-100 text-blue-600' },
+                { name: 'Fully Licensed', icon: FiCheck, color: 'bg-purple-100 text-purple-600' },
+                { name: 'Insured', icon: FiShield, color: 'bg-orange-100 text-orange-600' }
+              ].map((badge, index) => (
+                <div key={index} className="card text-center">
+                  <div className={`w-16 h-16 ${badge.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                    <badge.icon className="w-8 h-8" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900">{badge.name}</h4>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-gradient-to-r from-primary-600 to-accent-600 text-white py-16">
+        <div className="container-custom text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Ready to Work with UAE's Best?
+            </h2>
+            <p className="text-lg text-primary-100 mb-8 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who trust Alcoa Scaffolding 
+              for their most important projects.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact-us" className="btn-secondary bg-white text-primary-600 hover:bg-gray-100 border-white">
+                Start Your Project
+              </Link>
+              <Link to="/projects" className="btn-secondary border-white text-white hover:bg-white/10">
+                View Our Work
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AboutUs;
