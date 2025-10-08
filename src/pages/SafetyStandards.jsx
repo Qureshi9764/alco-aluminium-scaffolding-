@@ -15,7 +15,7 @@ import {
 import UnderConstruction from '../components/common/UnderConstruction';
 
 const SafetyStandards = () => {
-  const [showUnderConstruction, setShowUnderConstruction] = useState(true);
+const [showUnderConstruction, setShowUnderConstruction] = useState(true);
 
   // Show UnderConstruction page if enabled
   if (showUnderConstruction) {
@@ -237,7 +237,7 @@ const SafetyStandards = () => {
       </section>
 
       {/* Standards Compliance */}
-      <section className="section-padding bg-aluminum-50">
+      <section className="section-padding bg-aluminum-50 dark:bg-surface-dark transition-theme">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -246,10 +246,10 @@ const SafetyStandards = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               UAE Standards Compliance
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               We maintain full compliance with all relevant UAE standards 
               and continuously update our practices as regulations evolve.
             </p>
@@ -266,22 +266,22 @@ const SafetyStandards = () => {
                 className="card hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <standard.icon className="w-6 h-6 text-green-600" />
+                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <standard.icon className="w-6 h-6 text-green-600 dark:text-green-400" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-lg font-bold text-gray-900">
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
                         {standard.code}
                       </h3>
-                      <span className="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">
+                      <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs rounded-full font-medium">
                         {standard.compliance}
                       </span>
                     </div>
-                    <h4 className="font-semibold text-gray-800 mb-2">
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
                       {standard.title}
                     </h4>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
                       {standard.description}
                     </p>
                   </div>
@@ -302,10 +302,10 @@ const SafetyStandards = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Safety Procedures
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Our comprehensive safety procedures cover every aspect of scaffolding 
               operations from initial assessment to final dismantling.
             </p>
@@ -321,19 +321,19 @@ const SafetyStandards = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="card"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
                   {procedure.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {procedure.description}
                 </p>
                 
-                <h4 className="font-semibold text-gray-900 mb-3">Key Steps:</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Key Steps:</h4>
                 <ul className="space-y-2">
                   {procedure.steps.map((step, stepIndex) => (
                     <li key={stepIndex} className="flex items-start space-x-3">
                       <FiCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700 text-sm">{step}</span>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm">{step}</span>
                     </li>
                   ))}
                 </ul>
@@ -344,7 +344,7 @@ const SafetyStandards = () => {
       </section>
 
       {/* Training Programs */}
-      <section className="section-padding bg-aluminum-50">
+      <section className="section-padding bg-aluminum-50 dark:bg-surface-dark transition-theme">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -353,10 +353,10 @@ const SafetyStandards = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Safety Training Programs
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Comprehensive training programs to ensure all team members and clients 
               understand and implement proper safety procedures.
             </p>
@@ -373,27 +373,27 @@ const SafetyStandards = () => {
                 className="card hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-lg font-bold text-gray-900">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
                     {course.course}
                   </h3>
-                  <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
+                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-sm rounded-full">
                     {course.duration}
                   </span>
                 </div>
                 
                 <div className="mb-4">
-                  <span className="inline-flex items-center space-x-2 text-sm text-gray-600">
+                  <span className="inline-flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
                     <FiAward className="w-4 h-4 text-accent-500" />
                     <span>{course.certification}</span>
                   </span>
                 </div>
 
-                <h4 className="font-semibold text-gray-900 mb-3">Course Topics:</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">Course Topics:</h4>
                 <ul className="space-y-2 mb-6">
                   {course.topics.map((topic, topicIndex) => (
                     <li key={topicIndex} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                      <span className="text-gray-700 text-sm">{topic}</span>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm">{topic}</span>
                     </li>
                   ))}
                 </ul>
@@ -409,7 +409,7 @@ const SafetyStandards = () => {
       </section>
 
       {/* Emergency Procedures */}
-      <section className="bg-red-50 py-16">
+      <section className="bg-red-50 dark:bg-red-950 py-16 transition-theme">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -418,11 +418,11 @@ const SafetyStandards = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <FiAlertTriangle className="w-16 h-16 text-red-600 mx-auto mb-4" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <FiAlertTriangle className="w-16 h-16 text-red-600 dark:text-red-400 mx-auto mb-4" />
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Emergency Procedures
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Immediate action steps for emergency situations. All team members 
               are trained in these procedures and emergency contacts are always available.
             </p>
@@ -455,25 +455,25 @@ const SafetyStandards = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg"
+                className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg transition-theme"
               >
-                <h3 className="text-lg font-bold text-red-900 mb-2">
+                <h3 className="text-lg font-bold text-red-900 dark:text-red-300 mb-2">
                   {emergency.title}
                 </h3>
                 
-                <div className="bg-red-600 text-white rounded-lg p-4 mb-4 text-center">
+                <div className="bg-red-600 dark:bg-red-700 text-white rounded-lg p-4 mb-4 text-center">
                   <div className="text-2xl font-bold mb-1">{emergency.number}</div>
                   <div className="text-sm">{emergency.description}</div>
                 </div>
 
-                <h4 className="font-semibold text-gray-900 mb-2">Action Steps:</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Action Steps:</h4>
                 <ol className="space-y-1">
                   {emergency.actions.map((action, actionIndex) => (
                     <li key={actionIndex} className="flex items-start space-x-2 text-sm">
-                      <span className="w-5 h-5 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                      <span className="w-5 h-5 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
                         {actionIndex + 1}
                       </span>
-                      <span className="text-gray-700">{action}</span>
+                      <span className="text-gray-700 dark:text-gray-300">{action}</span>
                     </li>
                   ))}
                 </ol>
@@ -493,10 +493,10 @@ const SafetyStandards = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Safety Documentation
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Download our comprehensive safety documents, manuals, and forms 
               to ensure proper safety procedures on your project.
             </p>
@@ -513,16 +513,16 @@ const SafetyStandards = () => {
                 className="card hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
-                  <FiFileText className="w-8 h-8 text-primary-600 flex-shrink-0" />
+                  <FiFileText className="w-8 h-8 text-primary-600 dark:text-primary-400 flex-shrink-0" />
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
                       {doc.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-3">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
                       {doc.description}
                     </p>
                     <div className="flex items-center justify-between">
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-500 dark:text-gray-400">
                         {doc.type} • {doc.size} • {doc.pages}
                       </div>
                       <button className="btn-primary text-sm">

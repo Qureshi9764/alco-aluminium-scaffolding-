@@ -16,7 +16,7 @@ import {
 import UnderConstruction from '../components/common/UnderConstruction';
 
 const ServicesPage = () => {
-  const [showUnderConstruction, setShowUnderConstruction] = useState(true);
+  const [showUnderConstruction, setShowUnderConstruction] = useState(false);
 
   // Show UnderConstruction page if enabled
   if (showUnderConstruction) {
@@ -31,6 +31,213 @@ const ServicesPage = () => {
   }
 
   const services = [
+    {
+      id: 'ms-rent',
+      title: 'MS Scaffolding Rent',
+      description: 'Short-term and long-term MS scaffolding rental with fast delivery, setup assistance, and compliant equipment across UAE.',
+      icon: FiTruck,
+      image: 'ms-rent',
+      features: [
+        'Daily/weekly/monthly rental terms',
+        'Rapid delivery and pickup',
+        'Erection & dismantling support',
+        'Certified, well-maintained stock',
+        'Safety-compliant accessories'
+      ],
+      process: [
+        'Requirement assessment & quote',
+        'Scheduling and delivery',
+        'Optional setup assistance',
+        'On-call support during rental',
+        'Pickup at project completion'
+      ],
+      pricing: 'Competitive project-based pricing',
+      duration: 'Flexible: daily to long-term contracts'
+    },
+    {
+      id: 'scaffolding-delivery',
+      title: 'Scaffolding Delivery',
+      description: 'On-time delivery and pickup of scaffolding systems across UAE with careful handling and scheduling.',
+      icon: FiTruck,
+      image: 'delivery',
+      features: [
+        'UAE-wide logistics network',
+        'Scheduled delivery windows',
+        'Careful loading and unloading',
+        'Pickup on completion',
+        'Real-time coordination'
+      ],
+      process: [
+        'Confirm address and access details',
+        'Schedule time window',
+        'Secure transport and handling',
+        'Drop-off verification',
+        'Pickup upon project completion'
+      ],
+      pricing: 'Distance and load-based pricing',
+      duration: 'Same-day or scheduled'
+    },
+    {
+      id: 'installation-disassembly',
+      title: 'Scaffolding Installation/Disassembly',
+      description: 'Certified teams for safe scaffolding erection and dismantling per plan and safety standards.',
+      icon: FiTool,
+      image: 'installation-disassembly',
+      features: [
+        'Certified professional crews',
+        'Method statements and tagging',
+        'Site safety briefing',
+        'Quality checks and handover',
+        'Safe dismantling and clearance'
+      ],
+      process: [
+        'Site assessment and planning',
+        'Safety briefing and setup',
+        'Erection as per plan',
+        'Inspection and tagging',
+        'Dismantling and site cleanup'
+      ],
+      pricing: 'Project-based quotation',
+      duration: 'Depends on scope'
+    },
+    {
+      id: 'aluminium-scaffolding',
+      title: 'Aluminium Scaffolding',
+      description: 'Lightweight aluminium scaffolding supply, rental, and setup for safe and efficient access.',
+      icon: FiTool,
+      image: 'aluminium',
+      features: [
+        'Lightweight high-strength frames',
+        'Quick assembly systems',
+        'Multiple height options',
+        'Safety guardrails and platforms',
+        'Compliant with standards'
+      ],
+      process: [
+        'Requirement assessment',
+        'Package selection/quote',
+        'Delivery and optional setup',
+        'On-call support',
+        'Pickup or after-sales support'
+      ],
+      pricing: 'Rental or purchase options',
+      duration: 'Flexible terms'
+    },
+    {
+      id: 'warehouse-ladder',
+      title: 'Warehouse Ladder',
+      description: 'Industrial warehouse ladders for safe picking and access with stable platforms and guardrails.',
+      icon: FiTool,
+      image: 'warehouse-ladder',
+      features: [
+        'Stable platform designs',
+        'Anti-slip steps',
+        'Guardrails and handrails',
+        'Heavy-duty wheels',
+        'Custom heights available'
+      ],
+      process: [
+        'Use-case assessment',
+        'Model selection',
+        'Delivery and instructions',
+        'Periodic maintenance options',
+        'Support and parts'
+      ],
+      pricing: 'Model-based pricing',
+      duration: 'Stock or made-to-order'
+    },
+    {
+      id: 'fiberglass-ladder',
+      title: 'Fiberglass Ladder',
+      description: 'Non-conductive fiberglass ladders ideal for electrical environments and outdoor use.',
+      icon: FiTool,
+      image: 'fiberglass-ladder',
+      features: [
+        'Non-conductive material',
+        'Weather resistant',
+        'Wide step options',
+        'Lightweight yet sturdy',
+        'Safety compliant'
+      ],
+      process: [
+        'Requirement capture',
+        'Size/type recommendation',
+        'Delivery or pickup',
+        'Usage guidance',
+        'After-sales support'
+      ],
+      pricing: 'Competitive per model',
+      duration: 'Immediate for stocked sizes'
+    },
+    {
+      id: 'a-type-ladder',
+      title: 'A Type Ladder',
+      description: 'Versatile A-type ladders for maintenance and access with secure locking and anti-slip feet.',
+      icon: FiTool,
+      image: 'a-type-ladder',
+      features: [
+        'Durable hinge and locks',
+        'Anti-slip feet and steps',
+        'Multiple heights',
+        'Lightweight portability',
+        'Indoor and outdoor use'
+      ],
+      process: [
+        'Height selection',
+        'Order confirmation',
+        'Dispatch and delivery',
+        'Verification on receipt',
+        'Support as needed'
+      ],
+      pricing: 'Per height/model',
+      duration: 'Same-day dispatch (stock)'
+    },
+    {
+      id: 'ladder-manufacturers',
+      title: 'Ladder Manufacturers',
+      description: 'Custom ladder manufacturing and bulk supply for projects and businesses with documentation.',
+      icon: FiTool,
+      image: 'ladder-manufacturers',
+      features: [
+        'Custom sizes and materials',
+        'Bulk order pricing',
+        'Compliance certificates',
+        'Branding options',
+        'After-sales support'
+      ],
+      process: [
+        'BOQ/spec review',
+        'Design recommendation',
+        'Production and QA',
+        'Dispatch and delivery',
+        'Documentation and support'
+      ],
+      pricing: 'Quotation based on BOQ',
+      duration: 'Lead times per order size'
+    },
+    {
+      id: 'ms-sale',
+      title: 'MS Scaffolding Sale',
+      description: 'Supply of new MS scaffolding systems and components with expert guidance, documentation, and after-sales support.',
+      icon: FiTool,
+      image: 'ms-sale',
+      features: [
+        'Full system packages & components',
+        'Compliance certificates provided',
+        'Bulk order and project pricing',
+        'Delivery across UAE',
+        'After-sales technical support'
+      ],
+      process: [
+        'Bill of quantity (BOQ) review',
+        'Recommendation & quotation',
+        'Order confirmation & dispatch',
+        'Delivery and verification',
+        'After-sales support'
+      ],
+      pricing: 'Custom quotes based on BOQ',
+      duration: 'Lead times based on stock & order size'
+    },
     {
       id: 'installation',
       title: 'Professional Installation',
@@ -212,7 +419,7 @@ const ServicesPage = () => {
                 Get Service Quote
               </Link>
               <a href="tel:+971581375601" className="btn-secondary">
-                Call (555) 123-4567
+                Call +971 58 137 5601
               </a>
             </div>
           </motion.div>
@@ -220,7 +427,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-surface-light dark:bg-surface-dark transition-theme">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -232,13 +439,13 @@ const ServicesPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-primary-600" />
+                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-primary-600 dark:text-primary-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -248,7 +455,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-aluminum-50">
+      <section className="section-padding bg-aluminum-50 dark:bg-surface-dark transition-theme">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -257,16 +464,16 @@ const ServicesPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Comprehensive Service Solutions
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               We offer a complete range of scaffolding services to support your project 
               from planning to completion.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -274,18 +481,18 @@ const ServicesPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="card hover:shadow-2xl transition-all duration-300"
+                className="card p-4 sm:p-6 hover:shadow-2xl transition-all duration-300"
               >
                 {/* Service Header */}
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-6 h-6 text-primary-600" />
+                <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600 dark:text-primary-400" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100 mb-1 sm:mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                       {service.description}
                     </p>
                   </div>
@@ -293,12 +500,12 @@ const ServicesPage = () => {
 
                 {/* Features */}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Service Features</h4>
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Service Features</h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-2">
                         <FiCheck className="w-4 h-4 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-600 text-sm">{feature}</span>
+                        <span className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -306,35 +513,32 @@ const ServicesPage = () => {
 
                 {/* Process */}
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Our Process</h4>
-                  <ol className="space-y-2">
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Our Process</h4>
+                  <ul className="list-disc pl-6 space-y-2">
                     {service.process.map((step, stepIndex) => (
-                      <li key={stepIndex} className="flex items-start space-x-3">
-                        <span className="w-6 h-6 bg-primary-600 text-white text-xs rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          {stepIndex + 1}
-                        </span>
-                        <span className="text-gray-600 text-sm">{step}</span>
+                      <li key={stepIndex} className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+                        {step}
                       </li>
                     ))}
-                  </ol>
+                  </ul>
                 </div>
 
                 {/* Pricing and Duration */}
-                <div className="bg-gray-50 rounded-lg p-4 mb-6">
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mb-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <h5 className="text-sm font-semibold text-gray-700 mb-1">Pricing</h5>
-                      <p className="text-primary-600 font-bold">{service.pricing}</p>
+                      <h5 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Pricing</h5>
+                      <p className="text-primary-600 dark:text-primary-400 font-bold">{service.pricing}</p>
                     </div>
                     <div>
-                      <h5 className="text-sm font-semibold text-gray-700 mb-1">Duration</h5>
-                      <p className="text-gray-600 text-sm">{service.duration}</p>
+                      <h5 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">Duration</h5>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">{service.duration}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* CTA */}
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                   <Link 
                     to={`/contact-us?service=${service.id}`}
                     className="btn-primary flex-1"

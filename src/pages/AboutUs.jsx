@@ -14,7 +14,7 @@ import {
 import UnderConstruction from '../components/common/UnderConstruction';
 
 const AboutUs = () => {
-  const [showUnderConstruction, setShowUnderConstruction] = useState(true);
+  const [showUnderConstruction, setShowUnderConstruction] = useState(true );
 
   // Show UnderConstruction page if enabled
   if (showUnderConstruction) {
@@ -184,10 +184,10 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Our Story
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Founded in 2008 by John Mitchell, Alcoa Aluminium Scaffolding began as a 
                   small family business with a big vision: to revolutionize the scaffolding 
@@ -216,21 +216,21 @@ const AboutUs = () => {
               className="relative"
             >
               {/* Company Image Placeholder */}
-              <div className="aspect-square bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-primary-100 to-accent-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl overflow-hidden shadow-lg">
                 <div className="w-full h-full flex items-center justify-center">
-                  <svg className="w-32 h-32 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-32 h-32 text-primary-600 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
                 </div>
               </div>
 
               {/* Floating Achievement Card */}
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-6 border border-gray-100">
+              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 border-2 border-gray-200 dark:border-gray-700">
                 <div className="flex items-center space-x-3">
                   <FiAward className="w-8 h-8 text-accent-500" />
                   <div>
-                    <div className="font-bold text-gray-900">Industry Leader</div>
-                    <div className="text-sm text-gray-600">Safety Excellence Award 2023</div>
+                    <div className="font-bold text-gray-900 dark:text-gray-100">Industry Leader</div>
+                    <div className="text-sm text-gray-700 dark:text-gray-300 font-medium">Safety Excellence Award 2023</div>
                   </div>
                 </div>
               </div>
@@ -240,7 +240,7 @@ const AboutUs = () => {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding bg-aluminum-50">
+      <section className="section-padding bg-aluminum-50 dark:bg-surface-dark transition-theme">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -249,17 +249,17 @@ const AboutUs = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Our Journey
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
               Milestones that shaped our company and the scaffolding industry in UAE.
             </p>
           </motion.div>
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary-200"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-full bg-gradient-to-b from-gray-900 to-black dark:from-blue-400 dark:to-blue-500 shadow-xl border border-gray-700 dark:border-blue-500"></div>
 
             <div className="space-y-12">
               {timeline.map((event, index) => (
@@ -275,20 +275,20 @@ const AboutUs = () => {
                 >
                   <div className="flex-1 px-8">
                     <div className={`card ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                      <div className="text-2xl font-bold text-primary-600 mb-2">
+                      <div className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">
                         {event.year}
                       </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
                         {event.title}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                         {event.description}
                       </p>
                     </div>
                   </div>
 
                   {/* Timeline Node */}
-                  <div className="w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+                  <div className="w-8 h-8 bg-black dark:bg-blue-400 rounded-full border-4 border-white dark:border-gray-800 shadow-2xl z-10 ring-4 ring-gray-300 dark:ring-blue-600"></div>
 
                   <div className="flex-1 px-8"></div>
                 </motion.div>
@@ -308,10 +308,10 @@ const AboutUs = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Our Values
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
               The principles that guide everything we do and shape our company culture.
             </p>
           </motion.div>
@@ -326,13 +326,13 @@ const AboutUs = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <value.icon className="w-8 h-8 text-primary-600" />
+                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+                  <value.icon className="w-8 h-8 text-primary-600 dark:text-primary-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   {value.description}
                 </p>
               </motion.div>
@@ -342,7 +342,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team */}
-      <section className="section-padding bg-aluminum-50">
+      <section className="section-padding bg-aluminum-50 dark:bg-surface-dark transition-theme">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -351,10 +351,10 @@ const AboutUs = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Leadership Team
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
               Meet the experienced professionals who lead our company and drive our success.
             </p>
           </motion.div>
@@ -370,19 +370,19 @@ const AboutUs = () => {
                 className="card text-center hover:shadow-xl transition-all duration-300"
               >
                 {/* Team Member Photo */}
-                <div className="w-24 h-24 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary-700">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary-200 to-accent-200 dark:from-gray-700 dark:to-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
+                  <span className="text-2xl font-bold text-primary-700 dark:text-gray-200">
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-gray-900 mb-1">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-1">
                   {member.name}
                 </h3>
-                <p className="text-primary-600 font-medium mb-2">
+                <p className="text-primary-600 dark:text-primary-400 font-medium mb-2">
                   {member.role}
                 </p>
-                <div className="text-sm text-gray-600 space-y-1">
+                <div className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
                   <p>{member.experience}</p>
                   <p className="font-medium">{member.specialization}</p>
                 </div>
@@ -402,10 +402,10 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Certifications & Compliance
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
                 We maintain the highest industry standards through rigorous certification 
                 processes and ongoing compliance monitoring.
               </p>
@@ -421,7 +421,7 @@ const AboutUs = () => {
                     className="flex items-center space-x-3"
                   >
                     <FiCheck className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">{cert}</span>
+                    <span className="text-gray-800 dark:text-gray-300 font-medium">{cert}</span>
                   </motion.div>
                 ))}
               </div>
@@ -445,7 +445,7 @@ const AboutUs = () => {
                   <div className={`w-16 h-16 ${badge.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                     <badge.icon className="w-8 h-8" />
                   </div>
-                  <h4 className="font-semibold text-gray-900">{badge.name}</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">{badge.name}</h4>
                 </div>
               ))}
             </motion.div>
@@ -470,10 +470,16 @@ const AboutUs = () => {
               for their most important projects.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact-us" className="btn-secondary bg-white text-primary-600 hover:bg-gray-100 border-white">
+              <Link 
+                to="/contact-us" 
+                className="inline-flex items-center justify-center px-8 py-3 bg-white dark:bg-gray-800 text-black dark:text-white font-semibold rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 border-2 border-black dark:border-white shadow-lg transition-colors"
+              >
                 Start Your Project
               </Link>
-              <Link to="/projects" className="btn-secondary border-white text-white hover:bg-white/10">
+              <Link 
+                to="/projects" 
+                className="inline-flex items-center justify-center px-8 py-3 bg-transparent text-black dark:text-white font-semibold rounded-lg border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black shadow-lg transition-colors"
+              >
                 View Our Work
               </Link>
             </div>

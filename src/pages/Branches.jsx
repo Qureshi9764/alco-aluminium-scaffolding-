@@ -17,7 +17,7 @@ import { branchesData, getBranchesWithService, getBranchesWithSpecialty } from '
 import UnderConstruction from '../components/common/UnderConstruction';
 
 const Branches = () => {
-  const [showUnderConstruction, setShowUnderConstruction] = useState(true);
+  const [showUnderConstruction, setShowUnderConstruction] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedState, setSelectedState] = useState('all');
   const [selectedService, setSelectedService] = useState('all');

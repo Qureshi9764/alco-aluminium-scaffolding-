@@ -13,7 +13,7 @@ import {
 import UnderConstruction from '../components/common/UnderConstruction';
 
 const ProjectGallery = () => {
-  const [showUnderConstruction, setShowUnderConstruction] = useState(true);
+  const [showUnderConstruction, setShowUnderConstruction] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
 
   // Show UnderConstruction page if enabled
@@ -198,7 +198,7 @@ const ProjectGallery = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 bg-white border-b border-gray-200">
+      <section className="py-8 bg-white dark:bg-surface-dark border-b border-gray-200 dark:border-gray-700 transition-theme">
         <div className="container-custom">
           <div className="flex flex-wrap justify-center gap-4">
             {filters.map((filter) => (
@@ -207,8 +207,8 @@ const ProjectGallery = () => {
                 onClick={() => setActiveFilter(filter.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all ${
                   activeFilter === filter.id
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-primary-50 hover:text-primary-600'
+                    ? 'bg-primary-600 text-black shadow-lg ring-2 ring-primary-200 dark:bg-primary-500 dark:text-white dark:ring-primary-800'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900 hover:text-primary-600 dark:hover:text-primary-400'
                 }`}
               >
                 <FiFilter className="w-4 h-4" />
@@ -230,15 +230,13 @@ const ProjectGallery = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`card hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ${
-                  project.featured ? 'ring-2 ring-primary-200' : ''
-                }`}
+                className="card hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
               >
                 {/* Project Image */}
-                <div className="relative aspect-video bg-gradient-to-br from-primary-100 to-accent-100 rounded-lg mb-6 -mx-6 -mt-6 overflow-hidden">
+                <div className="relative aspect-video bg-gradient-to-br from-primary-100 to-accent-100 dark:from-gray-800 dark:to-gray-700 rounded-lg mb-6 -mx-6 -mt-6 overflow-hidden">
                   <div className="w-full h-full flex items-center justify-center">
                     <svg
-                      className="w-20 h-20 text-primary-600"
+                      className="w-20 h-20 text-primary-600 dark:text-gray-300"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -246,93 +244,102 @@ const ProjectGallery = () => {
                     </svg>
                   </div>
                   
-                  {/* Badges */}
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    {project.featured && (
+                  {/* Featured Badge - Positioned separately to maintain consistent complexity badge position */}
+                  {project.featured && (
+                    <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 bg-accent-500 text-white text-xs rounded-full font-medium">
                         Featured
                       </span>
-                    )}
+                    </div>
+                  )}
+                  
+                  {/* Complexity Badge - Always positioned at same level */}
+                  <div className={`absolute left-4 ${project.featured ? 'top-4' : 'top-4'}`}>
                     <span className={`px-3 py-1 text-xs rounded-full border ${getComplexityColor(project.stats.complexity)}`}>
                       {project.stats.complexity}
                     </span>
                   </div>
 
                   {/* Year Badge */}
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 rounded-lg">
-                    <span className="text-sm font-semibold text-gray-900">{project.year}</span>
+                  <div className="absolute top-4 right-4">
+                    <div className="px-3 py-1 bg-white/90 dark:bg-gray-800/90 rounded-lg">
+                      <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">{project.year}</span>
+                    </div>
                   </div>
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <button className="bg-white text-gray-900 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                    <Link 
+                      to={`/project-details/${project.id}`}
+                      className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    >
                       <FiExternalLink className="w-4 h-4 inline mr-2" />
                       View Details
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
                 {/* Project Info */}
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                       {project.description}
                     </p>
                   </div>
 
                   {/* Project Details */}
-                  <div className="grid grid-cols-3 gap-4 py-4 border-t border-gray-100">
+                  <div className="grid grid-cols-3 gap-4 py-4 border-t border-gray-100 dark:border-gray-700">
                     <div className="text-center">
-                      <FiMapPin className="w-4 h-4 text-gray-400 mx-auto mb-1" />
-                      <div className="text-xs text-gray-600">{project.location}</div>
+                      <FiMapPin className="w-4 h-4 text-gray-400 dark:text-gray-500 mx-auto mb-1" />
+                      <div className="text-xs text-gray-600 dark:text-gray-400">{project.location}</div>
                     </div>
                     <div className="text-center">
-                      <FiCalendar className="w-4 h-4 text-gray-400 mx-auto mb-1" />
-                      <div className="text-xs text-gray-600">{project.duration}</div>
+                      <FiCalendar className="w-4 h-4 text-gray-400 dark:text-gray-500 mx-auto mb-1" />
+                      <div className="text-xs text-gray-600 dark:text-gray-400">{project.duration}</div>
                     </div>
                     <div className="text-center">
-                      <FiUsers className="w-4 h-4 text-gray-400 mx-auto mb-1" />
-                      <div className="text-xs text-gray-600">{project.team}</div>
+                      <FiUsers className="w-4 h-4 text-gray-400 dark:text-gray-500 mx-auto mb-1" />
+                      <div className="text-xs text-gray-600 dark:text-gray-400">{project.team}</div>
                     </div>
                   </div>
 
                   {/* Project Stats */}
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
-                      <div className="text-lg font-bold text-gray-900">{project.stats.height}</div>
-                      <div className="text-xs text-gray-600">Height</div>
+                      <div className="text-lg font-bold text-gray-900 dark:text-gray-100">{project.stats.height}</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">Height</div>
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-gray-900">{project.stats.area}</div>
-                      <div className="text-xs text-gray-600">Coverage</div>
+                      <div className="text-lg font-bold text-gray-900 dark:text-gray-100">{project.stats.area}</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">Coverage</div>
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-primary-600 capitalize">{project.category}</div>
-                      <div className="text-xs text-gray-600">Type</div>
+                      <div className="text-lg font-bold text-primary-600 dark:text-primary-400 capitalize">{project.category}</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">Type</div>
                     </div>
                   </div>
 
                   {/* Challenge & Solution */}
                   <div className="space-y-3">
                     <div>
-                      <h5 className="text-sm font-semibold text-gray-900 mb-1">Challenge</h5>
-                      <p className="text-xs text-gray-600">{project.challenge}</p>
+                      <h5 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1">Challenge</h5>
+                      <p className="text-xs text-gray-600 dark:text-gray-300">{project.challenge}</p>
                     </div>
                     <div>
-                      <h5 className="text-sm font-semibold text-gray-900 mb-1">Solution</h5>
-                      <p className="text-xs text-gray-600">{project.solution}</p>
+                      <h5 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1">Solution</h5>
+                      <p className="text-xs text-gray-600 dark:text-gray-300">{project.solution}</p>
                     </div>
                   </div>
 
                   {/* Results */}
                   <div>
-                    <h5 className="text-sm font-semibold text-gray-900 mb-2">Key Results</h5>
+                    <h5 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Key Results</h5>
                     <ul className="space-y-1">
                       {project.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="flex items-center text-xs text-gray-600">
+                        <li key={resultIndex} className="flex items-center text-xs text-gray-600 dark:text-gray-300">
                           <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2 flex-shrink-0"></div>
                           {result}
                         </li>
@@ -345,7 +352,7 @@ const ProjectGallery = () => {
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full"
                       >
                         {tag}
                       </span>
@@ -353,11 +360,14 @@ const ProjectGallery = () => {
                   </div>
 
                   {/* CTA */}
-                  <div className="pt-4 border-t border-gray-100">
-                    <button className="w-full btn-secondary text-sm">
+                  <div className="pt-4 border-t border-gray-100 dark:border-gray-700">
+                    <Link 
+                      to={`/project-details/${project.id}`}
+                      className="w-full btn-secondary text-sm inline-flex items-center justify-center"
+                    >
                       View Full Case Study
                       <FiArrowRight className="w-4 h-4 ml-2" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -367,7 +377,7 @@ const ProjectGallery = () => {
       </section>
 
       {/* Awards Section */}
-      <section className="section-padding bg-aluminum-50">
+      <section className="section-padding bg-aluminum-50 dark:bg-surface-dark transition-theme">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -376,10 +386,10 @@ const ProjectGallery = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Award-Winning Projects
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Our commitment to excellence has been recognized by industry leaders 
               and clients across Abu Dhabi and UAE.
             </p>
@@ -415,16 +425,16 @@ const ProjectGallery = () => {
                 className="card text-center"
               >
                 <FiAward className="w-12 h-12 text-accent-500 mx-auto mb-4" />
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">
                   {award.award}
                 </h3>
-                <p className="text-primary-600 font-medium mb-1">
+                <p className="text-primary-600 dark:text-primary-400 font-medium mb-1">
                   {award.project}
                 </p>
-                <p className="text-sm text-gray-600 mb-2">
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
                   {award.organization}
                 </p>
-                <span className="inline-block px-3 py-1 bg-accent-100 text-accent-700 text-sm rounded-full">
+                <span className="inline-block px-3 py-1 bg-accent-100 dark:bg-accent-900 text-accent-700 dark:text-accent-300 text-sm rounded-full">
                   {award.year}
                 </span>
               </motion.div>
@@ -450,10 +460,10 @@ const ProjectGallery = () => {
               your scaffolding requirements and create the next showcase project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact-us" className="btn-secondary bg-white text-primary-600 hover:bg-gray-100 border-white">
+              <Link to="/contact-us" className="btn-secondary bg-white text-primary-600 hover:bg-gray-100 border-primary-600 hover:border-primary-700">
                 Start Your Project
               </Link>
-              <Link to="/services" className="btn-secondary border-white text-white hover:bg-white/10">
+              <Link to="/services" className="btn-secondary border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white hover:border-primary-700">
                 Explore Services
               </Link>
             </div>

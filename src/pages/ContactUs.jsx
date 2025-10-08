@@ -44,7 +44,7 @@ const ContactUs = () => {
       icon: FiPhone,
       title: 'Phone',
       primary: '+971 58 137 5601',
-      secondary: '+971 58 137 5601',
+      // secondary: '+971 58 137 5601',
       description: 'Mon-Fri 7AM-6PM, Sat 8AM-4PM',
       action: 'tel:+971581375601'
     },
@@ -52,15 +52,15 @@ const ContactUs = () => {
       icon: FiMail,
       title: 'Email',
       primary: 'alcoaaluminiumscaffolding1@gmail.com',
-      secondary: 'alcoaaluminiumscaffolding1@gmail.com',
-      description: '24/7 response within 2 hours',
+      // secondary: 'alcoaaluminiumscaffolding1@gmail.com',
+      description: '24/7 response within 2 hours',  
       action: 'mailto:alcoaaluminiumscaffolding1@gmail.com'
     },
     {
       icon: FiMapPin,
       title: 'Address',
-      primary: 'Musaffah',
-      secondary: 'Abu Dhabi, UAE',
+      primary: 'Musaffah,Abu Dhabi, UAE',
+      // secondary: 'Abu Dhabi, UAE',
       description: 'Visit our showroom and warehouse',
       action: 'https://maps.google.com'
     },
@@ -68,7 +68,7 @@ const ContactUs = () => {
       icon: FiClock,
       title: 'Emergency',
       primary: '24/7 Emergency Hotline',
-      secondary: '+971 58 137 5601',
+      // secondary: '+971 58 137 5601',
       description: 'Urgent scaffolding support',
       action: 'tel:+971581375601'
     }
@@ -122,34 +122,34 @@ const ContactUs = () => {
       {/* Personal Information */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Full Name *
           </label>
           <div className="relative">
-            <FiUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <FiUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-5 h-5" />
             <input
               type="text"
               required
               value={contactForm.name}
               onChange={(e) => handleInputChange('name', e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               placeholder="Enter your full name"
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Email Address *
           </label>
           <div className="relative">
-            <FiMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <FiMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-5 h-5" />
             <input
               type="email"
               required
               value={contactForm.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               placeholder="Enter your email"
             />
           </div>
@@ -158,33 +158,33 @@ const ContactUs = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Phone Number *
           </label>
           <div className="relative">
-            <FiPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <FiPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-5 h-5" />
             <input
               type="tel"
               required
               value={contactForm.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               placeholder="Enter your phone number"
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Company (Optional)
           </label>
           <div className="relative">
-            <FiBriefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <FiBriefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-5 h-5" />
             <input
               type="text"
               value={contactForm.company}
               onChange={(e) => handleInputChange('company', e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               placeholder="Enter company name"
             />
           </div>
@@ -193,13 +193,13 @@ const ContactUs = () => {
 
       {/* Project Information */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Project Type
         </label>
         <select
           value={contactForm.projectType}
           onChange={(e) => handleInputChange('projectType', e.target.value)}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         >
           <option value="">Select project type</option>
           <option value="residential">Residential</option>
@@ -213,17 +213,17 @@ const ContactUs = () => {
 
       {/* Message */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           Message *
         </label>
         <div className="relative">
-          <FiMessageSquare className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
+          <FiMessageSquare className="absolute left-3 top-3 text-gray-400 dark:text-gray-500 w-5 h-5" />
           <textarea
             required
             rows={6}
             value={contactForm.message}
             onChange={(e) => handleInputChange('message', e.target.value)}
-            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
             placeholder="Tell us about your project requirements..."
           />
         </div>
@@ -253,36 +253,36 @@ const ContactUs = () => {
   const QuoteForm = () => (
     <form className="space-y-6">
       {/* Quick Quote Form */}
-      <div className="bg-primary-50 rounded-lg p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
+        <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-6">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
           Quick Quote Request
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Project Height (meters)
             </label>
             <input
               type="number"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary-500"
+              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-1 focus:ring-primary-500"
               placeholder="e.g., 10"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Coverage Area (sqm)
             </label>
             <input
               type="number"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary-500"
+              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-1 focus:ring-primary-500"
               placeholder="e.g., 100"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Project Duration
             </label>
-            <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary-500">
+            <select className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-1 focus:ring-primary-500">
               <option value="">Select duration</option>
               <option value="1-7">1-7 days</option>
               <option value="1-4">1-4 weeks</option>
@@ -291,12 +291,12 @@ const ContactUs = () => {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Start Date
             </label>
             <input
               type="date"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-primary-500"
+              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-1 focus:ring-primary-500"
             />
           </div>
         </div>
@@ -341,19 +341,19 @@ const ContactUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="card text-center hover:shadow-xl transition-all duration-300"
+                className="card text-center hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <info.icon className="w-8 h-8 text-primary-600" />
+                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <info.icon className="w-8 h-8 text-primary-600 dark:text-primary-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
                   {info.title}
                 </h3>
-                <div className="space-y-1 mb-3">
-                  <p className="font-medium text-gray-900">{info.primary}</p>
-                  <p className="text-gray-600">{info.secondary}</p>
+                <div className="space-y-1 mb-3 px-2">
+                  <p className="font-medium text-gray-900 dark:text-gray-100 break-words text-sm leading-tight">{info.primary}</p>
+                  <p className="text-gray-600 dark:text-gray-300 break-words text-sm leading-tight">{info.secondary}</p>
                 </div>
-                <p className="text-sm text-gray-500 mb-4">{info.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">{info.description}</p>
                 <a
                   href={info.action}
                   className="btn-primary text-sm"
@@ -380,13 +380,13 @@ const ContactUs = () => {
               transition={{ duration: 0.8 }}
             >
               {/* Tab Navigation */}
-              <div className="flex mb-8 bg-white rounded-lg p-1 shadow-sm">
+              <div className="flex mb-8 bg-white dark:bg-gray-800 rounded-lg p-1 shadow-sm">
                 <button
                   onClick={() => setActiveTab('contact')}
                   className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
                     activeTab === 'contact'
-                      ? 'bg-primary-600 text-white'
-                      : 'text-gray-600 hover:text-primary-600'
+                      ? 'bg-primary-600 text-black dark:text-white shadow-lg'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-700'
                   }`}
                 >
                   Contact Form
@@ -395,8 +395,8 @@ const ContactUs = () => {
                   onClick={() => setActiveTab('quote')}
                   className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
                     activeTab === 'quote'
-                      ? 'bg-primary-600 text-white'
-                      : 'text-gray-600 hover:text-primary-600'
+                      ? 'bg-primary-600 text-black dark:text-white shadow-lg'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-700'
                   }`}
                 >
                   Quick Quote
@@ -408,10 +408,10 @@ const ContactUs = () => {
                 {contactForm.submitted ? (
                   <div className="text-center py-8">
                     <FiCheck className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                       Message Sent Successfully!
                     </h3>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-600 dark:text-gray-300 mb-6">
                       Thank you for contacting us. We'll get back to you within 2 hours.
                     </p>
                     <button
@@ -423,7 +423,7 @@ const ContactUs = () => {
                   </div>
                 ) : (
                   <>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                       {activeTab === 'contact' ? 'Send us a Message' : 'Get Quick Quote'}
                     </h2>
                     {activeTab === 'contact' ? <ContactForm /> : <QuoteForm />}
@@ -439,7 +439,7 @@ const ContactUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                 Our Locations
               </h2>
 
@@ -447,10 +447,10 @@ const ContactUs = () => {
                 {offices.map((office, index) => (
                   <div
                     key={index}
-                    className={`card ${office.isHeadquarters ? 'border-primary-200 bg-primary-50' : ''}`}
+                    className={`card ${office.isHeadquarters ? 'border-primary-200 dark:border-primary-800 bg-primary-50 dark:bg-primary-900/20' : ''}`}
                   >
                     <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-lg font-semibold text-gray-900">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                         {office.city}
                         {office.isHeadquarters && (
                           <span className="ml-2 px-2 py-1 bg-primary-600 text-white text-xs rounded-full">
@@ -461,17 +461,17 @@ const ContactUs = () => {
                       <FiMapPin className="w-5 h-5 text-primary-600" />
                     </div>
                     
-                    <div className="space-y-2 text-sm text-gray-600">
+                    <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
                       <p>{office.address}</p>
                       <p>
                         <FiPhone className="w-4 h-4 inline mr-2" />
-                        <a href={`tel:${office.phone}`} className="hover:text-primary-600">
+                        <a href={`tel:${office.phone}`} className="hover:text-primary-600 dark:hover:text-primary-400">
                           {office.phone}
                         </a>
                       </p>
                       <p>
                         <FiMail className="w-4 h-4 inline mr-2" />
-                        <a href={`mailto:${office.email}`} className="hover:text-primary-600">
+                        <a href={`mailto:${office.email}`} className="hover:text-primary-600 dark:hover:text-primary-400">
                           {office.email}
                         </a>
                       </p>
@@ -481,14 +481,14 @@ const ContactUs = () => {
               </div>
 
               {/* Emergency Contact */}
-              <div className="card bg-red-50 border-red-200 mt-8">
+              <div className="card bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800 mt-8">
                 <div className="flex items-center mb-4">
                   <FiAlertCircle className="w-6 h-6 text-red-600 mr-3" />
-                  <h3 className="text-lg font-semibold text-red-900">
+                  <h3 className="text-lg font-semibold text-red-900 dark:text-red-400">
                     Emergency Support
                   </h3>
                 </div>
-                <p className="text-red-700 mb-4">
+                <p className="text-red-700 dark:text-red-300 mb-4">
                   For urgent scaffolding needs or safety emergencies, 
                   contact our 24/7 emergency hotline.
                 </p>

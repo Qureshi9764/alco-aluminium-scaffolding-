@@ -15,6 +15,78 @@ import {
 const Services = () => {
   const services = [
     {
+      icon: FiTruck,
+      title: 'MS Scaffolding Rent',
+      description: 'Flexible MS scaffolding rentals with fast delivery, setup support, and compliant equipment across UAE.',
+      features: ['Daily/weekly/monthly terms', 'Rapid delivery & pickup', 'Erection & dismantling support'],
+      image: 'ms-rent',
+      link: '/services/ms-rent'
+    },
+    {
+      icon: FiTruck,
+      title: 'Scaffolding Delivery',
+      description: 'On-time scaffolding delivery and pickup across UAE with careful handling.',
+      features: ['Scheduled windows', 'Careful loading/unloading', 'UAE-wide logistics'],
+      image: 'delivery',
+      link: '/services/scaffolding-delivery'
+    },
+    {
+      icon: FiTool,
+      title: 'Installation/Disassembly',
+      description: 'Certified erection and dismantling services with tagging and safety checks.',
+      features: ['Certified crews', 'Method statements', 'Quality checks'],
+      image: 'installation-disassembly',
+      link: '/services/installation-disassembly'
+    },
+    {
+      icon: FiTool,
+      title: 'Aluminium Scaffolding',
+      description: 'Lightweight aluminium scaffolding supply, rental, and setup.',
+      features: ['Quick assembly', 'Multiple heights', 'Safety guardrails'],
+      image: 'aluminium',
+      link: '/services/aluminium-scaffolding'
+    },
+    {
+      icon: FiTool,
+      title: 'Warehouse Ladder',
+      description: 'Industrial warehouse ladders with platforms and guardrails.',
+      features: ['Anti-slip steps', 'Stable platforms', 'Custom heights'],
+      image: 'warehouse-ladder',
+      link: '/services/warehouse-ladder'
+    },
+    {
+      icon: FiTool,
+      title: 'Fiberglass Ladder',
+      description: 'Non-conductive ladders ideal for electrical work environments.',
+      features: ['Non-conductive', 'Weather resistant', 'Lightweight'],
+      image: 'fiberglass-ladder',
+      link: '/services/fiberglass-ladder'
+    },
+    {
+      icon: FiTool,
+      title: 'A Type Ladder',
+      description: 'Versatile A-type ladders with secure locks and anti-slip feet.',
+      features: ['Secure locks', 'Anti-slip feet', 'Portable'],
+      image: 'a-type-ladder',
+      link: '/services/a-type-ladder'
+    },
+    {
+      icon: FiTool,
+      title: 'Ladder Manufacturers',
+      description: 'Custom ladder manufacturing and bulk supply with documentation.',
+      features: ['Custom sizes', 'Bulk pricing', 'Certificates'],
+      image: 'ladder-manufacturers',
+      link: '/services/ladder-manufacturers'
+    },
+    {
+      icon: FiTool,
+      title: 'MS Scaffolding Sale',
+      description: 'Supply of new MS scaffolding systems and components with documentation and after-sales support.',
+      features: ['Full system packages', 'Compliance certificates', 'After-sales technical support'],
+      image: 'ms-sale',
+      link: '/services/ms-sale'
+    },
+    {
       icon: FiTool,
       title: 'Scaffolding Installation',
       description: 'Professional installation of aluminum scaffolding systems for residential, commercial, and industrial projects.',
