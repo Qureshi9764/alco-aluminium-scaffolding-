@@ -12,7 +12,7 @@ import {
   FiArrowUp
 } from 'react-icons/fi';
 import { motion } from 'framer-motion';
-import logo from '../../assets/logo.png';
+  import logo from '../../assets/logo.jpeg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -92,9 +92,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: FiFacebook, url: 'https://facebook.com', label: 'Facebook' },
+    { icon: FiFacebook, url: 'https://www.facebook.com/share/1BM1JAj1mr/?mibextid=wwXIfr', label: 'Facebook' },
+    { icon: FiInstagram, url: 'https://www.instagram.com/alcoa_aluminium_scaffolding?igsh=ODBrdTRiZDFib3g3', label: 'Instagram' },
     { icon: FiLinkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FiInstagram, url: 'https://instagram.com', label: 'Instagram' },
     { icon: FiTwitter, url: 'https://twitter.com', label: 'Twitter' },
   ];
 
@@ -113,17 +113,17 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              {/* <img 
+              <img 
                 src={logo} 
                 alt="Alcoa Aluminium Scaffolding" 
                 className="h-12 w-auto"
-              /> */}
-                <div className="hidden sm:block">
+              />
+              {/* <div>
                 <h1 className="text-xl font-bold text-brand-primary-800 dark:text-brand-primary-200">
                   Alcoa 
                 </h1>
-                {/* <p className="text-sm text-text-secondary dark:text-text-secondary-dark">Scaffolding Solutions</p> */}
-              </div> 
+                <p className="text-xs text-text-secondary dark:text-text-secondary-dark">Scaffolding Solutions</p>
+              </div> */}
             </Link>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-8 leading-relaxed">
               Professional scaffolding solutions in Abu Dhabi, UAE. We deliver safe, reliable, and efficient services for all your construction needs.

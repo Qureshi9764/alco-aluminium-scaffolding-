@@ -2,12 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Layout Components
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
 import BackToTop from './components/common/BackToTop';
+import WhatsAppButton from './components/common/WhatsAppButton';
 
 // Pages
 import Home from './pages/Home';
@@ -40,6 +43,12 @@ import WarehouseLadder from './pages/services/WarehouseLadder';
 import FiberglassLadder from './pages/services/FiberglassLadder';
 import ATypeLadder from './pages/services/ATypeLadder';
 import LadderManufacturers from './pages/services/LadderManufacturers';
+import SingleWidthMobileTowers from './pages/services/SingleWidthMobileTowers';
+import DoubleWidthMobileTowers from './pages/services/DoubleWidthMobileTowers';
+import BridgewayMobileTowers from './pages/services/BridgewayMobileTowers';
+import FoldingMobileTowers from './pages/services/FoldingMobileTowers';
+import StairwayMobileTowers from './pages/services/StairwayMobileTowers';
+import SteelCupLockScaffolding from './pages/services/SteelCupLockScaffolding';
 
 // Error Boundary
 import ErrorBoundary from './components/common/ErrorBoundary';
@@ -76,6 +85,12 @@ function App() {
                 <Route path="/services/fiberglass-ladder" element={<FiberglassLadder />} />
                 <Route path="/services/a-type-ladder" element={<ATypeLadder />} />
                 <Route path="/services/ladder-manufacturers" element={<LadderManufacturers />} />
+                <Route path="/services/single-width-mobile-towers" element={<SingleWidthMobileTowers />} />
+                <Route path="/services/double-width-mobile-towers" element={<DoubleWidthMobileTowers />} />
+                <Route path="/services/bridgeway-mobile-towers" element={<BridgewayMobileTowers />} />
+                <Route path="/services/folding-mobile-towers" element={<FoldingMobileTowers />} />
+                <Route path="/services/stairway-mobile-towers" element={<StairwayMobileTowers />} />
+                <Route path="/services/steel-cup-lock-scaffolding" element={<SteelCupLockScaffolding />} />
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/projects" element={<ProjectGallery />} />
@@ -94,8 +109,22 @@ function App() {
             </main>
             
             <Footer />
+            <WhatsAppButton />
             <BackToTop />
           </div>
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="colored"
+            className="mt-16"
+          />
         </Router>
       </ErrorBoundary>
     </Provider>

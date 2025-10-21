@@ -138,6 +138,123 @@ const ProjectDetails = () => {
         'Weather Innovation Award',
         'Luxury Construction Standard'
       ]
+    },
+    {
+      id: 4,
+      title: 'Abu Dhabi Refinery Maintenance',
+      category: 'industrial',
+      location: 'Abu Dhabi, UAE',
+      year: '2023',
+      duration: '3 months',
+      team: '25 specialists',
+      description: 'Specialized scaffolding for petroleum refinery maintenance with strict safety protocols.',
+      challenge: 'Hazardous environment with explosive risk and 24/7 operations',
+      solution: 'Explosion-proof scaffolding with integrated gas monitoring',
+      results: [
+        'Zero safety incidents',
+        'Operations continued uninterrupted',
+        'All safety certifications maintained'
+      ],
+      stats: { height: '45m', area: '3,200m²', complexity: 'Expert' },
+      tags: ['Hazardous Environment', 'Industrial', '24/7 Operations'],
+      fullDescription: 'This critical refinery maintenance project required the highest safety standards in a hazardous petroleum environment. Our specialized scaffolding solution enabled essential maintenance work while maintaining continuous refinery operations and zero safety incidents.',
+      approach: [
+        'Comprehensive hazard assessment and safety planning',
+        'Explosion-proof scaffolding system design and approval',
+        'Integrated gas monitoring and alert systems',
+        'Continuous safety supervision and protocols',
+        'Phased installation to maintain operations'
+      ],
+      technologies: [
+        'Explosion-Proof Scaffolding Materials',
+        'Integrated Gas Monitoring Systems',
+        'Hazardous Area Safety Equipment',
+        '24/7 Safety Monitoring',
+        'Emergency Response Systems'
+      ],
+      awards: [
+        'Excellence in Safety 2023',
+        'Industrial Safety Innovation',
+        'Zero Incident Achievement'
+      ]
+    },
+    {
+      id: 5,
+      title: 'Abu Dhabi Heritage Mosque',
+      category: 'heritage',
+      location: 'Abu Dhabi, UAE',
+      year: '2022',
+      duration: '5 months',
+      team: '8 specialists',
+      description: 'Delicate scaffolding work for 150-year-old church restoration with heritage preservation focus.',
+      challenge: 'Protecting delicate stonework while providing full access',
+      solution: 'Minimal-impact scaffolding with protective barriers',
+      results: [
+        'Zero heritage damage',
+        'Community access maintained',
+        'Award-winning restoration'
+      ],
+      stats: { height: '35m', area: '800m²', complexity: 'Advanced' },
+      tags: ['Heritage', 'Community', 'Award Winning'],
+      fullDescription: 'The restoration of this 150-year-old heritage mosque required exceptional care and precision. Our minimal-impact scaffolding solution enabled full restoration access while preserving the delicate stonework and maintaining community access throughout the project.',
+      approach: [
+        'Heritage structure assessment and conservation planning',
+        'Custom low-impact scaffolding design',
+        'Protective barriers for delicate stonework',
+        'Community engagement and access maintenance',
+        'Heritage compliance monitoring and documentation'
+      ],
+      technologies: [
+        'Minimal-Impact Scaffolding Systems',
+        'Heritage-Approved Protective Materials',
+        'Soft-Touch Support Systems',
+        'Documentation and Monitoring Tools',
+        'Community Safety Systems'
+      ],
+      awards: [
+        'Heritage Preservation Award 2022',
+        'Community Impact Excellence',
+        'Restoration Quality Recognition'
+      ]
+    },
+    {
+      id: 6,
+      title: 'Abu Dhabi Industrial Complex',
+      category: 'industrial',
+      location: 'Abu Dhabi, UAE',
+      year: '2023',
+      duration: '6 months',
+      team: '18 specialists',
+      description: 'Large-scale industrial facility construction with multiple specialized access requirements.',
+      challenge: 'Coordinating with multiple trades in complex industrial environment',
+      solution: 'Modular scaffolding system with flexible access points',
+      results: [
+        'Perfect trade coordination',
+        'Schedule maintained',
+        'Safety targets exceeded'
+      ],
+      stats: { height: '40m', area: '5,000m²', complexity: 'Expert' },
+      tags: ['Multi-Trade', 'Complex', 'Large Scale'],
+      fullDescription: 'This massive industrial complex required sophisticated coordination between multiple trades and specialized access solutions. Our modular scaffolding system provided flexible access points that adapted to the complex workflow requirements while maintaining strict safety standards.',
+      approach: [
+        'Multi-trade workflow analysis and coordination planning',
+        'Modular scaffolding design for flexible access',
+        'Trade-specific access point configuration',
+        'Real-time coordination and adjustment protocols',
+        'Integrated safety management systems'
+      ],
+      technologies: [
+        'Modular Scaffolding Framework',
+        'Flexible Access Point Systems',
+        'Multi-Trade Coordination Tools',
+        'Real-Time Monitoring Technology',
+        'Large-Scale Safety Systems'
+      ],
+      awards: [
+        'Industrial Construction Excellence 2023',
+        'Multi-Trade Coordination Award',
+        'Large-Scale Project Achievement'
+      ]
     }
   ];
 

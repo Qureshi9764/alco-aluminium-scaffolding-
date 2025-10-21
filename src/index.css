@@ -384,4 +384,62 @@
   .focus-visible-ring {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-500 focus-visible:ring-offset-2;
   }
+
+  /* Toast Notification Styles */
+  .Toastify__toast {
+    @apply rounded-lg shadow-lg font-medium;
+  }
+
+  .Toastify__toast--success {
+    @apply bg-green-500 text-white;
+  }
+
+  .Toastify__toast--error {
+    @apply bg-red-500 text-white;
+  }
+
+  .Toastify__toast--info {
+    @apply bg-blue-500 text-white;
+  }
+
+  .Toastify__toast--warning {
+    @apply bg-yellow-500 text-white;
+  }
+
+  .Toastify__progress-bar--success {
+    @apply bg-green-300;
+  }
+
+  .Toastify__progress-bar--error {
+    @apply bg-red-300;
+  }
+
+  .Toastify__progress-bar--info {
+    @apply bg-blue-300;
+  }
+
+  .Toastify__progress-bar--warning {
+    @apply bg-yellow-300;
+  }
+
+  /* Dark mode toast adjustments */
+  .dark .Toastify__toast {
+    @apply shadow-2xl border border-gray-700;
+  }
+
+  .dark .Toastify__toast--success {
+    @apply bg-green-600;
+  }
+
+  .dark .Toastify__toast--error {
+    @apply bg-red-600;
+  }
+
+  .dark .Toastify__toast--info {
+    @apply bg-blue-600;
+  }
+
+  .dark .Toastify__toast--warning {
+    @apply bg-yellow-600;
+  }
 }

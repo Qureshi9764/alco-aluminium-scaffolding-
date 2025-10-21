@@ -14,7 +14,7 @@ import {
 import UnderConstruction from '../components/common/UnderConstruction';
 
 const AboutUs = () => {
-  const [showUnderConstruction, setShowUnderConstruction] = useState(true );
+  const [showUnderConstruction, setShowUnderConstruction] = useState(false);
 
   // Show UnderConstruction page if enabled
   if (showUnderConstruction) {
@@ -93,32 +93,32 @@ const AboutUs = () => {
 
   const team = [
     {
-      name: 'John Mitchell',
+      name: 'Syed Tawakal',
       role: 'CEO & Founder',
       experience: '20+ years',
       specialization: 'Strategic Leadership',
-      image: 'john-mitchell'
+      image: 'syed-tawakal'
     },
     {
-      name: 'Sarah Chen',
+      name: 'Syed Tawakal',
       role: 'Operations Director',
       experience: '15+ years',
       specialization: 'Project Management',
-      image: 'sarah-chen'
+      image: 'syed-tawakal'
     },
     {
-      name: 'Michael Rodriguez',
+      name: 'Syed Tawakal',
       role: 'Safety Director',
       experience: '18+ years',
       specialization: 'Safety & Compliance',
-      image: 'michael-rodriguez'
+      image: 'syed-tawakal'
     },
     {
-      name: 'Emma Thompson',
+      name: 'Syed Tawakal',
       role: 'Technical Manager',
       experience: '12+ years',
       specialization: 'Engineering Solutions',
-      image: 'emma-thompson'
+      image: 'syed-tawakal'
     }
   ];
 
@@ -189,7 +189,7 @@ const AboutUs = () => {
               </h2>
               <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
-                  Founded in 2008 by John Mitchell, Alcoa Aluminium Scaffolding began as a 
+                  Founded in 2008 by Syed Tawakal, Alcoa Aluminium Scaffolding began as a 
                   small family business with a big vision: to revolutionize the scaffolding 
                   industry in UAE through innovative solutions and unwavering commitment to safety.
                 </p>

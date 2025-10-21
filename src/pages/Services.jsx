@@ -32,29 +32,6 @@ const ServicesPage = () => {
 
   const services = [
     {
-      id: 'ms-rent',
-      title: 'MS Scaffolding Rent',
-      description: 'Short-term and long-term MS scaffolding rental with fast delivery, setup assistance, and compliant equipment across UAE.',
-      icon: FiTruck,
-      image: 'ms-rent',
-      features: [
-        'Daily/weekly/monthly rental terms',
-        'Rapid delivery and pickup',
-        'Erection & dismantling support',
-        'Certified, well-maintained stock',
-        'Safety-compliant accessories'
-      ],
-      process: [
-        'Requirement assessment & quote',
-        'Scheduling and delivery',
-        'Optional setup assistance',
-        'On-call support during rental',
-        'Pickup at project completion'
-      ],
-      pricing: 'Competitive project-based pricing',
-      duration: 'Flexible: daily to long-term contracts'
-    },
-    {
       id: 'scaffolding-delivery',
       title: 'Scaffolding Delivery',
       description: 'On-time delivery and pickup of scaffolding systems across UAE with careful handling and scheduling.',
@@ -76,29 +53,6 @@ const ServicesPage = () => {
       ],
       pricing: 'Distance and load-based pricing',
       duration: 'Same-day or scheduled'
-    },
-    {
-      id: 'installation-disassembly',
-      title: 'Scaffolding Installation/Disassembly',
-      description: 'Certified teams for safe scaffolding erection and dismantling per plan and safety standards.',
-      icon: FiTool,
-      image: 'installation-disassembly',
-      features: [
-        'Certified professional crews',
-        'Method statements and tagging',
-        'Site safety briefing',
-        'Quality checks and handover',
-        'Safe dismantling and clearance'
-      ],
-      process: [
-        'Site assessment and planning',
-        'Safety briefing and setup',
-        'Erection as per plan',
-        'Inspection and tagging',
-        'Dismantling and site cleanup'
-      ],
-      pricing: 'Project-based quotation',
-      duration: 'Depends on scope'
     },
     {
       id: 'aluminium-scaffolding',
@@ -216,6 +170,167 @@ const ServicesPage = () => {
       duration: 'Lead times per order size'
     },
     {
+      id: 'single-width-mobile-towers',
+      title: 'Single Width Mobile Towers',
+      description: 'Compact single width mobile towers available for sale and hire, perfect for confined spaces and indoor applications.',
+      icon: FiTool,
+      image: 'single-width-mobile',
+      features: [
+        'Compact footprint design',
+        'Easy maneuverability',
+        'Quick assembly system',
+        'Ideal for narrow spaces',
+        'Sale and hire options'
+      ],
+      process: [
+        'Site requirement assessment',
+        'Tower specification selection',
+        'Delivery or pickup arrangement',
+        'Assembly guidance provided',
+        'Ongoing support during rental'
+      ],
+      pricing: 'Competitive hire and sale rates',
+      duration: 'Daily/weekly/monthly hire or purchase'
+    },
+    {
+      id: 'double-width-mobile-towers',
+      title: 'Double Width Mobile Towers',
+      description: 'Heavy-duty double width mobile towers for sale and hire, offering enhanced stability and larger working platforms.',
+      icon: FiTool,
+      image: 'double-width-mobile',
+      features: [
+        'Enhanced stability',
+        'Higher load capacity',
+        'Wider working platform',
+        'Suitable for heavy-duty work',
+        'Multiple height configurations'
+      ],
+      process: [
+        'Load and height requirement review',
+        'Tower configuration selection',
+        'Delivery and optional setup',
+        'Safety briefing and inspection',
+        'Flexible rental or purchase terms'
+      ],
+      pricing: 'Project-based quotation',
+      duration: 'Flexible hire periods or outright purchase'
+    },
+    {
+      id: 'bridgeway-mobile-towers',
+      title: 'Bridgeway Mobile Towers',
+      description: 'Specialized bridgeway mobile towers designed for safe access between two elevated points with secure crossing platforms.',
+      icon: FiTool,
+      image: 'bridgeway-mobile',
+      features: [
+        'Dual access point design',
+        'Safe crossing platform',
+        'Adjustable height settings',
+        'Secure locking mechanism',
+        'Compliance certified'
+      ],
+      process: [
+        'Span and height assessment',
+        'Configuration planning',
+        'Delivery and assembly',
+        'Safety inspection and approval',
+        'Usage training and support'
+      ],
+      pricing: 'Custom quotation based on span',
+      duration: 'Available for hire or purchase'
+    },
+    {
+      id: 'folding-mobile-towers',
+      title: 'Folding Mobile Towers',
+      description: 'Innovative folding mobile towers featuring compact folding design for easy transportation, storage, and rapid deployment.',
+      icon: FiTool,
+      image: 'folding-mobile',
+      features: [
+        'Compact folding mechanism',
+        'Space-saving storage',
+        'Easy transportation',
+        'Quick setup and deployment',
+        'Lightweight aluminum construction'
+      ],
+      process: [
+        'Requirement and usage assessment',
+        'Model selection and demo',
+        'Delivery with folding instructions',
+        'Setup training provided',
+        'Maintenance and support'
+      ],
+      pricing: 'Competitive pricing for hire/sale',
+      duration: 'Immediate availability from stock'
+    },
+    {
+      id: 'stairway-mobile-towers',
+      title: 'Stairway Mobile Towers',
+      description: 'Mobile towers with integrated internal stairway access for enhanced safety, eliminating ladder climbing.',
+      icon: FiTool,
+      image: 'stairway-mobile',
+      features: [
+        'Internal stairway access',
+        'Enhanced worker safety',
+        'Easy and safe climbing',
+        'Handrails and guardrails',
+        'Suitable for all heights'
+      ],
+      process: [
+        'Height and access requirements',
+        'Tower selection and planning',
+        'Delivery and professional setup',
+        'Safety inspection and handover',
+        'Flexible hire or purchase'
+      ],
+      pricing: 'Premium pricing for enhanced safety',
+      duration: 'Daily to long-term rental or sale'
+    },
+    {
+      id: 'steel-cup-lock-scaffolding',
+      title: 'Steel Cup Lock Scaffolding',
+      description: 'Robust steel cup lock scaffolding system ideal for heavy-duty construction applications with quick assembly features.',
+      icon: FiTool,
+      image: 'cup-lock',
+      features: [
+        'High load-bearing capacity',
+        'Quick cup lock assembly',
+        'Versatile configurations',
+        'Suitable for complex structures',
+        'Certified and compliant'
+      ],
+      process: [
+        'Project scope and BOQ review',
+        'System design and planning',
+        'Supply or rental arrangement',
+        'Installation support available',
+        'Quality checks and certification'
+      ],
+      pricing: 'Project-based quotation',
+      duration: 'Flexible rental terms or purchase'
+    },
+    {
+      id: 'ms-rent',
+      title: 'MS Scaffolding Rent',
+      description: 'Short-term and long-term MS scaffolding rental with fast delivery, setup assistance, and compliant equipment across UAE.',
+      icon: FiTruck,
+      image: 'ms-rent',
+      features: [
+        'Daily/weekly/monthly rental terms',
+        'Rapid delivery and pickup',
+        'Erection & dismantling support',
+        'Certified, well-maintained stock',
+        'Safety-compliant accessories'
+      ],
+      process: [
+        'Requirement assessment & quote',
+        'Scheduling and delivery',
+        'Optional setup assistance',
+        'On-call support during rental',
+        'Pickup at project completion'
+      ],
+      pricing: 'Competitive project-based pricing',
+      duration: 'Flexible: daily to long-term contracts'
+    },
+    {
       id: 'ms-sale',
       title: 'MS Scaffolding Sale',
       description: 'Supply of new MS scaffolding systems and components with expert guidance, documentation, and after-sales support.',
@@ -239,9 +354,9 @@ const ServicesPage = () => {
       duration: 'Lead times based on stock & order size'
     },
     {
-      id: 'installation',
-      title: 'Professional Installation',
-      description: 'Expert scaffolding installation services for projects of all sizes, from residential to large-scale commercial developments.',
+      id: 'installation-setup',
+      title: 'Installation & Setup',
+      description: 'Expert scaffolding installation and setup services for projects of all sizes, from residential to large-scale commercial developments.',
       icon: FiTool,
       image: 'installation',
       features: [
@@ -261,26 +376,49 @@ const ServicesPage = () => {
       duration: '2-6 hours depending on complexity'
     },
     {
-      id: 'rental',
-      title: 'Equipment Rental',
-      description: 'Flexible scaffolding rental options with comprehensive support, delivery, and pickup services across Abu Dhabi and UAE.',
-      icon: FiTruck,
-      image: 'rental',
+      id: 'installation-disassembly',
+      title: 'Installation/Disassembly',
+      description: 'Certified teams for safe scaffolding erection and dismantling per plan and safety standards.',
+      icon: FiTool,
+      image: 'installation-disassembly',
       features: [
-        'Flexible rental periods',
-        'Free delivery and pickup',
-        'Premium quality equipment',
-        'Maintenance included',
-        'Insurance coverage options'
+        'Certified professional crews',
+        'Method statements and tagging',
+        'Site safety briefing',
+        'Quality checks and handover',
+        'Safe dismantling and clearance'
       ],
       process: [
-        'Quote and booking',
-        'Equipment delivery',
-        'Setup assistance if needed',
-        'Scheduled pickup on completion'
+        'Site assessment and planning',
+        'Safety briefing and setup',
+        'Erection as per plan',
+        'Inspection and tagging',
+        'Dismantling and site cleanup'
       ],
-      pricing: 'From $45/day per unit',
-      duration: 'Daily, weekly, or monthly rates'
+      pricing: 'Project-based quotation',
+      duration: 'Depends on scope'
+    },
+    {
+      id: 'maintenance',
+      title: 'Maintenance',
+      description: 'Regular maintenance and repair services to keep your scaffolding equipment in optimal condition and extend its lifespan.',
+      icon: FiSettings,
+      image: 'maintenance',
+      features: [
+        'Scheduled maintenance programs',
+        'Emergency repair services',
+        'Component replacement',
+        'Performance optimization',
+        'Extended equipment life'
+      ],
+      process: [
+        'Equipment assessment',
+        'Maintenance schedule planning',
+        'Preventive maintenance work',
+        'Performance monitoring'
+      ],
+      pricing: 'From $120/hour',
+      duration: 'Scheduled or on-demand'
     },
     {
       id: 'safety-inspections',
@@ -306,7 +444,7 @@ const ServicesPage = () => {
     },
     {
       id: 'training',
-      title: 'Training Programs',
+      title: 'Training',
       description: 'Professional training courses covering scaffolding safety, installation procedures, and maintenance protocols.',
       icon: FiBook,
       image: 'training',
@@ -325,50 +463,6 @@ const ServicesPage = () => {
       ],
       pricing: 'From $195 per person',
       duration: 'Half-day to 3-day programs'
-    },
-    {
-      id: 'maintenance',
-      title: 'Maintenance Services',
-      description: 'Regular maintenance and repair services to keep your scaffolding equipment in optimal condition and extend its lifespan.',
-      icon: FiSettings,
-      image: 'maintenance',
-      features: [
-        'Scheduled maintenance programs',
-        'Emergency repair services',
-        'Component replacement',
-        'Performance optimization',
-        'Extended equipment life'
-      ],
-      process: [
-        'Equipment assessment',
-        'Maintenance schedule planning',
-        'Preventive maintenance work',
-        'Performance monitoring'
-      ],
-      pricing: 'From $120/hour',
-      duration: 'Scheduled or on-demand'
-    },
-    {
-      id: 'support',
-      title: '24/7 Emergency Support',
-      description: 'Round-the-clock emergency support and assistance for urgent scaffolding requirements and safety concerns.',
-      icon: FiClock,
-      image: 'support',
-      features: [
-        'Emergency callout service',
-        'Technical support hotline',
-        'Rapid response team',
-        'Safety incident support',
-        'Equipment replacement'
-      ],
-      process: [
-        'Emergency contact received',
-        'Rapid response deployment',
-        'On-site problem resolution',
-        'Follow-up and documentation'
-      ],
-      pricing: 'Emergency rates apply',
-      duration: 'Immediate response'
     }
   ];
 

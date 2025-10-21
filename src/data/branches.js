@@ -16,16 +16,23 @@ export const branchesData = [
       phone: '+971 58 137 5601',
       fax: '+971 58 137 5602',
       email: 'alcoaaluminiumscaffolding1@gmail.com',
-      manager: 'Ahmed Al Mansouri',
+      manager: 'Syed Tawakal',
       managerTitle: 'Regional Director'
     },
     services: [
-      'Equipment Rental',
-      'Installation Services',
-      'Safety Training',
-      'Emergency Support',
-      'Design Consultation',
-      'Maintenance Services'
+      'MS Scaffolding Rent',
+      'MS Scaffolding Sale',
+      'Installation & Setup',
+      'Installation/Disassembly',
+      'Maintenance',
+      'Safety Inspections',
+      'Training',
+      'Scaffolding Delivery',
+      'Aluminium Scaffolding',
+      'Warehouse Ladder',
+      'Fiberglass Ladder',
+      'A Type Ladder',
+      'Ladder Manufacturers'
     ],
     hours: {
       monday: '7:00 AM - 6:00 PM',

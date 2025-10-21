@@ -16,7 +16,7 @@ import {
   selectMobileMenuOpen 
 } from '../../redux/slices/navigationSlice';
 import DarkModeToggle from '../common/DarkModeToggle';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.jpeg';
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -58,6 +58,18 @@ const Navbar = () => {
       path: '/services', 
       hasDropdown: true,
       dropdownItems: [
+        { name: 'Scaffolding Delivery', path: '/services/scaffolding-delivery' },
+        { name: 'Aluminium Scaffolding', path: '/services/aluminium-scaffolding' },
+        { name: 'Warehouse Ladder', path: '/services/warehouse-ladder' },
+        { name: 'Fiberglass Ladder', path: '/services/fiberglass-ladder' },
+        { name: 'A Type Ladder', path: '/services/a-type-ladder' },
+        { name: 'Ladder Manufacturers', path: '/services/ladder-manufacturers' },
+        { name: 'Single Width Mobile Towers', path: '/services/single-width-mobile-towers' },
+        { name: 'Double Width Mobile Towers', path: '/services/double-width-mobile-towers' },
+        { name: 'Bridgeway Mobile Towers', path: '/services/bridgeway-mobile-towers' },
+        { name: 'Folding Mobile Towers', path: '/services/folding-mobile-towers' },
+        { name: 'Stairway Mobile Towers', path: '/services/stairway-mobile-towers' },
+        { name: 'Steel Cup Lock Scaffolding', path: '/services/steel-cup-lock-scaffolding' },
         { name: 'MS Scaffolding Rent', path: '/services/ms-rent' },
         { name: 'MS Scaffolding Sale', path: '/services/ms-sale' },
         { name: 'Installation & Setup', path: '/services/installation' },
@@ -65,12 +77,6 @@ const Navbar = () => {
         { name: 'Maintenance', path: '/services/maintenance' },
         { name: 'Safety Inspections', path: '/services/inspections' },
         { name: 'Training', path: '/services/training' },
-        { name: 'Scaffolding Delivery', path: '/services/scaffolding-delivery' },
-        { name: 'Aluminium Scaffolding', path: '/services/aluminium-scaffolding' },
-        { name: 'Warehouse Ladder', path: '/services/warehouse-ladder' },
-        { name: 'Fiberglass Ladder', path: '/services/fiberglass-ladder' },
-        { name: 'A Type Ladder', path: '/services/a-type-ladder' },
-        { name: 'Ladder Manufacturers', path: '/services/ladder-manufacturers' },
       ]
     },
     { name: 'Projects', path: '/projects', hasDropdown: false },
@@ -138,17 +144,17 @@ const Navbar = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              {/* <img 
+              <img 
                 src={logo} 
                 alt="Alcoa Aluminium Scaffolding" 
-                className="h-12 w-auto"
-              /> */}
-               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-brand-primary-800 dark:text-brand-primary-200">
+                className="h-12 sm:h-14 w-auto"
+              />
+              <div className="hidden sm:block">
+                {/* <h1 className="text-xl font-bold text-brand-primary-800 dark:text-brand-primary-200">
                   Alcoa 
-                </h1>
-                {/* <p className="text-sm text-text-secondary dark:text-text-secondary-dark">Scaffolding Solutions</p> */}
-              </div> 
+                </h1> */}
+                {/* <p className="text-xs text-text-secondary dark:text-text-secondary-dark">Scaffolding Solutions</p> */}
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -184,13 +190,17 @@ const Navbar = () => {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
-                          className="absolute top-full left-0 mt-2 w-64 bg-surface-light dark:bg-surface-muted-dark rounded-lg shadow-xl border border-border-light dark:border-border-dark py-2"
+                          className={`absolute top-full left-0 mt-2 bg-surface-light dark:bg-surface-muted-dark rounded-lg shadow-xl border border-border-light dark:border-border-dark py-2 ${
+                            item.dropdownItems.length > 8 
+                              ? 'grid grid-cols-2 gap-x-4 w-[520px]' 
+                              : 'w-64'
+                          }`}
                         >
                           {item.dropdownItems.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               to={dropdownItem.path}
-                              className="block px-4 py-2 text-text-secondary dark:text-text-secondary-dark hover:bg-brand-primary-50 dark:hover:bg-brand-primary-950 hover:text-brand-primary-600 transition-colors"
+                              className="block px-4 py-2 text-text-secondary dark:text-text-secondary-dark hover:bg-brand-primary-50 dark:hover:bg-brand-primary-950 hover:text-brand-primary-600 transition-colors text-sm"
                             >
                               {dropdownItem.name}
                             </Link>

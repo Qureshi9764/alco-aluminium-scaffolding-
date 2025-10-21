@@ -3,136 +3,165 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   FiTool, 
-  FiShield, 
-  FiSettings, 
-  FiBook,
-  FiTruck,
-  FiClock,
   FiArrowRight,
   FiCheck
 } from 'react-icons/fi';
 
+// Import service images
+import steelScaffolding from '../../assets/steel-transfom-img.jpg';
+import combinedScaffolding from '../../assets/COMBINED-SCAFFOLDING.png';
+import installationImg from '../../assets/DSC_4691--1-scaled.jpg';
+import cantileverScaffolding from '../../assets/CANTILEVER SCAFFOLDING.png';
+import maintenanceImg from '../../assets/DSC_4730-2-scaled.jpg';
+import safetyImg from '../../assets/DSC_4738-200x300.jpg';
+import trainingImg from '../../assets/DSC_4753-copy-200x300.jpg';
+import deliveryImg from '../../assets/DSC_4789-200x300.jpg';
+import aluminiumPlatform from '../../assets/ALUMINIUM-PLATFORM-LADDER-.jpg';
+import warehouseLadder from '../../assets/WARE-HOUSE-LADDER.png';
+import fiberglassLadder from '../../assets/fiberglass-straight-scaled.jpg';
+import aTypeLadder from '../../assets/aluminium a type dual purpose.jpg';
+import ladderManufacturing from '../../assets/ware house ladder.png';
+import singleWidthTower from '../../assets/73-121-1659x2048.png';
+import doubleWidthTower from '../../assets/PODIUM.png';
+import bridgeScaffolding from '../../assets/BRIDGE-SCAFFOLDING.png';
+import foldingTower from '../../assets/FOLDING-TOWER.png';
+import stairwayTower from '../../assets/STAIRWAY-681x1024.jpg';
+import cupLockScaffolding from '../../assets/steel-transfom-img.jpg';
+
 const Services = () => {
   const services = [
     {
-      icon: FiTruck,
-      title: 'MS Scaffolding Rent',
-      description: 'Flexible MS scaffolding rentals with fast delivery, setup support, and compliant equipment across UAE.',
-      features: ['Daily/weekly/monthly terms', 'Rapid delivery & pickup', 'Erection & dismantling support'],
-      image: 'ms-rent',
-      link: '/services/ms-rent'
-    },
-    {
-      icon: FiTruck,
       title: 'Scaffolding Delivery',
       description: 'On-time scaffolding delivery and pickup across UAE with careful handling.',
       features: ['Scheduled windows', 'Careful loading/unloading', 'UAE-wide logistics'],
-      image: 'delivery',
+      image: deliveryImg,
       link: '/services/scaffolding-delivery'
     },
     {
-      icon: FiTool,
-      title: 'Installation/Disassembly',
-      description: 'Certified erection and dismantling services with tagging and safety checks.',
-      features: ['Certified crews', 'Method statements', 'Quality checks'],
-      image: 'installation-disassembly',
-      link: '/services/installation-disassembly'
-    },
-    {
-      icon: FiTool,
       title: 'Aluminium Scaffolding',
       description: 'Lightweight aluminium scaffolding supply, rental, and setup.',
       features: ['Quick assembly', 'Multiple heights', 'Safety guardrails'],
-      image: 'aluminium',
+      image: aluminiumPlatform,
       link: '/services/aluminium-scaffolding'
     },
     {
-      icon: FiTool,
       title: 'Warehouse Ladder',
       description: 'Industrial warehouse ladders with platforms and guardrails.',
       features: ['Anti-slip steps', 'Stable platforms', 'Custom heights'],
-      image: 'warehouse-ladder',
+      image: warehouseLadder,
       link: '/services/warehouse-ladder'
     },
     {
-      icon: FiTool,
       title: 'Fiberglass Ladder',
       description: 'Non-conductive ladders ideal for electrical work environments.',
       features: ['Non-conductive', 'Weather resistant', 'Lightweight'],
-      image: 'fiberglass-ladder',
+      image: fiberglassLadder,
       link: '/services/fiberglass-ladder'
     },
     {
-      icon: FiTool,
       title: 'A Type Ladder',
       description: 'Versatile A-type ladders with secure locks and anti-slip feet.',
       features: ['Secure locks', 'Anti-slip feet', 'Portable'],
-      image: 'a-type-ladder',
+      image: aTypeLadder,
       link: '/services/a-type-ladder'
     },
     {
-      icon: FiTool,
       title: 'Ladder Manufacturers',
       description: 'Custom ladder manufacturing and bulk supply with documentation.',
       features: ['Custom sizes', 'Bulk pricing', 'Certificates'],
-      image: 'ladder-manufacturers',
+      image: ladderManufacturing,
       link: '/services/ladder-manufacturers'
     },
     {
-      icon: FiTool,
+      title: 'Single Width Mobile Towers',
+      description: 'Compact single width mobile towers for sale and hire, perfect for confined spaces.',
+      features: ['Easy mobility', 'Quick assembly', 'Space-efficient design'],
+      image: singleWidthTower,
+      link: '/services/single-width-mobile-towers'
+    },
+    {
+      title: 'Double Width Mobile Towers',
+      description: 'Heavy-duty double width mobile towers for sale and hire with enhanced stability.',
+      features: ['Greater stability', 'Higher load capacity', 'Wide working platform'],
+      image: doubleWidthTower,
+      link: '/services/double-width-mobile-towers'
+    },
+    {
+      title: 'Bridgeway Mobile Towers',
+      description: 'Specialized bridgeway mobile towers for access between two points.',
+      features: ['Dual access points', 'Safe crossing platform', 'Adjustable height'],
+      image: bridgeScaffolding,
+      link: '/services/bridgeway-mobile-towers'
+    },
+    {
+      title: 'Folding Mobile Towers',
+      description: 'Innovative folding mobile towers for easy transport and storage.',
+      features: ['Compact folding design', 'Easy transport', 'Quick setup'],
+      image: foldingTower,
+      link: '/services/folding-mobile-towers'
+    },
+    {
+      title: 'Stairway Mobile Towers',
+      description: 'Mobile towers with integrated stairway access for enhanced safety.',
+      features: ['Internal stairway', 'Enhanced safety', 'Easy access'],
+      image: stairwayTower,
+      link: '/services/stairway-mobile-towers'
+    },
+    {
+      title: 'Steel Cup Lock Scaffolding',
+      description: 'Robust steel cup lock scaffolding system for heavy-duty applications.',
+      features: ['High load capacity', 'Quick assembly', 'Versatile configurations'],
+      image: cupLockScaffolding,
+      link: '/services/steel-cup-lock-scaffolding'
+    },
+    {
+      title: 'MS Scaffolding Rent',
+      description: 'Flexible MS scaffolding rentals with fast delivery, setup support, and compliant equipment across UAE.',
+      features: ['Daily/weekly/monthly terms', 'Rapid delivery & pickup', 'Erection & dismantling support'],
+      image: steelScaffolding,
+      link: '/services/ms-rent'
+    },
+    {
       title: 'MS Scaffolding Sale',
       description: 'Supply of new MS scaffolding systems and components with documentation and after-sales support.',
       features: ['Full system packages', 'Compliance certificates', 'After-sales technical support'],
-      image: 'ms-sale',
+      image: combinedScaffolding,
       link: '/services/ms-sale'
     },
     {
-      icon: FiTool,
-      title: 'Scaffolding Installation',
-      description: 'Professional installation of aluminum scaffolding systems for residential, commercial, and industrial projects.',
-      features: ['Same-day service available', 'Certified installation team', 'All safety equipment included'],
-      image: 'installation',
+      title: 'Installation & Setup',
+      description: 'Professional installation and setup services for scaffolding systems with certified teams.',
+      features: ['Certified installation teams', 'Same-day service available', 'Comprehensive safety checks'],
+      image: installationImg,
       link: '/services/installation'
     },
     {
-      icon: FiTruck,
-      title: 'Equipment Rental',
-      description: 'Flexible rental options for scaffolding equipment with delivery and pickup services across Abu Dhabi and UAE.',
-      features: ['Flexible rental periods', 'Delivery & pickup included', 'Premium quality equipment'],
-      image: 'rental',
-      link: '/services/rental'
+      title: 'Installation/Disassembly',
+      description: 'Certified erection and dismantling services with tagging and safety checks.',
+      features: ['Certified crews', 'Method statements', 'Quality checks'],
+      image: cantileverScaffolding,
+      link: '/services/installation-disassembly'
     },
     {
-      icon: FiShield,
-      title: 'Safety Inspections',
-      description: 'Comprehensive safety inspections and compliance checks to ensure your scaffolding meets all regulations.',
-      features: ['Daily inspection reports', 'Compliance certification', 'Risk assessment included'],
-      image: 'safety',
-      link: '/services/inspections'
-    },
-    {
-      icon: FiBook,
-      title: 'Training Programs',
-      description: 'Professional training courses for scaffolding safety, installation, and maintenance procedures.',
-      features: ['Certified training courses', 'Group & individual sessions', 'Industry-recognized certificates'],
-      image: 'training',
-      link: '/services/training'
-    },
-    {
-      icon: FiSettings,
-      title: 'Maintenance Services',
+      title: 'Maintenance',
       description: 'Regular maintenance and repair services to keep your scaffolding in optimal condition.',
       features: ['Scheduled maintenance', 'Emergency repairs', 'Component replacement'],
-      image: 'maintenance',
+      image: maintenanceImg,
       link: '/services/maintenance'
     },
     {
-      icon: FiClock,
-      title: '24/7 Support',
-      description: 'Round-the-clock emergency support and assistance for urgent scaffolding requirements.',
-      features: ['Emergency callout service', 'Technical support hotline', 'Rapid response team'],
-      image: 'support',
-      link: '/services/support'
+      title: 'Safety Inspections',
+      description: 'Comprehensive safety inspections and compliance checks to ensure your scaffolding meets all regulations.',
+      features: ['Daily inspection reports', 'Compliance certification', 'Risk assessment included'],
+      image: safetyImg,
+      link: '/services/inspections'
+    },
+    {
+      title: 'Training',
+      description: 'Professional training courses for scaffolding safety, installation, and maintenance procedures.',
+      features: ['Certified training courses', 'Group & individual sessions', 'Industry-recognized certificates'],
+      image: trainingImg,
+      link: '/services/training'
     }
   ];
 
@@ -198,42 +227,44 @@ const Services = () => {
               variants={itemVariants}
               className="group h-full"
             >
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-4 sm:p-6 h-full flex flex-col hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700">
-                {/* Service Icon */}
-                <div className="flex justify-center mb-3 sm:mb-4">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                    <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-gray-600 dark:text-gray-300" />
-                  </div>
+              <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden h-full flex flex-col hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                {/* Service Image */}
+                <div className="w-full h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-blue-50 to-gray-50 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center p-4">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
-
+                
                 {/* Content */}
-                <div className="flex-1 space-y-3 sm:space-y-4">
-                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white text-center">
+                <div className="p-4 sm:p-6 flex-1 flex flex-col bg-white dark:bg-gray-800">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-3">
                     {service.title}
                   </h3>
                   
-                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <ul className="space-y-1 sm:space-y-2">
+                  <ul className="space-y-2 mb-4 flex-1">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2">
-                        <FiCheck className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" />
-                        <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                      <li key={featureIndex} className="flex items-start space-x-2">
+                        <FiCheck className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-sm sm:text-base text-gray-700 dark:text-gray-200 font-medium">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* CTA */}
-                  <div className="pt-2">
+                  <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
                     <Link 
                       to={service.link}
-                      className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium text-xs sm:text-sm"
+                      className="inline-flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold text-sm sm:text-base transition-colors"
                     >
                       <span>Learn more</span>
-                      <FiArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                      <FiArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                     </Link>
                   </div>
                 </div>

@@ -15,7 +15,7 @@ import {
 import UnderConstruction from '../components/common/UnderConstruction';
 
 const SafetyStandards = () => {
-const [showUnderConstruction, setShowUnderConstruction] = useState(true);
+const [showUnderConstruction, setShowUnderConstruction] = useState(false);
 
   // Show UnderConstruction page if enabled
   if (showUnderConstruction) {

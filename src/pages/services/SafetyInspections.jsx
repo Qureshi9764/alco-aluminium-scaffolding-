@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import safetyImg from '../../assets/DSC_4738-200x300.jpg';
 
 const SafetyInspections = () => {
   return (
@@ -21,6 +22,17 @@ const SafetyInspections = () => {
 
       <section className="section-padding">
         <div className="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {/* Service Image */}
+          <div className="lg:col-span-3 mb-6">
+            <div className="card overflow-hidden">
+              <img 
+                src={safetyImg} 
+                alt="Safety Inspections" 
+                className="w-full h-64 sm:h-96 object-contain bg-gradient-to-br from-blue-50 to-gray-50 dark:from-gray-800 dark:to-gray-900"
+              />
+            </div>
+          </div>
+
           <div className="lg:col-span-2 card">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">What We Check</h2>
             <ul className="list-disc pl-6 space-y-2 text-text-secondary dark:text-text-secondary-dark">
