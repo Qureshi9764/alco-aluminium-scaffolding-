@@ -112,7 +112,7 @@ const Navbar = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <FiMail className="w-4 h-4" />
-                <span>alcoaaluminiumscaffolding1@gmail.com</span>
+                <span>Sales@alcoascaffolding.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <FiMapPin className="w-4 h-4" />

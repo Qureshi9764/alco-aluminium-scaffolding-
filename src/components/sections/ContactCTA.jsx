@@ -34,8 +34,8 @@ const ContactCTA = () => {
       icon: FiMail,
       title: 'Email Us',
       description: 'Get a detailed quote',
-      action: 'alcoaaluminiumscaffolding1@gmail.com',
-      link: 'mailto:alcoaaluminiumscaffolding1@gmail.com',
+      action: 'Sales@alcoascaffolding.com',
+      link: 'mailto:Sales@alcoascaffolding.com',
       available: '24/7 Response'
     },
     {

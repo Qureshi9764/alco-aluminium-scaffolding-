@@ -30,7 +30,7 @@ A complete **Node.js + Express + Nodemailer** backend system for handling contac
 ## 🎯 Features Implemented
 
 ### 1. Contact Form Email
-- ✅ Sends email to company (alcoaaluminiumscaffolding1@gmail.com)
+- ✅ Sends email to company (Sales@alcoascaffolding.com)
 - ✅ Sends auto-reply to customer
 - ✅ Beautiful HTML email templates
 - ✅ Form validation
@@ -364,7 +364,7 @@ Your email system is ready! Here's what you can do:
 
 Need help?
 - 📖 Check [BACKEND_SETUP_GUIDE.md](BACKEND_SETUP_GUIDE.md)
-- 📧 Email: alcoaaluminiumscaffolding1@gmail.com
+- 📧 Email: Sales@alcoascaffolding.com
 - 🐛 Check server logs for errors
 
 ---

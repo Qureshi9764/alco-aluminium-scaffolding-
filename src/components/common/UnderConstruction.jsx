@@ -57,7 +57,7 @@ const UnderConstruction = ({
                 </div>
                 <div className="text-left">
                   <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                  <p className="font-semibold text-gray-900 dark:text-white text-sm">alcoaaluminiumscaffolding1@gmail.com</p>
+                  <p className="font-semibold text-gray-900 dark:text-white text-sm">Sales@alcoascaffolding.com</p>
                 </div>
               </div>
             </div>

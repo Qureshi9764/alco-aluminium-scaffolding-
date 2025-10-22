@@ -252,10 +252,10 @@ const QuoteForm = ({ contactForm, handleInputChange, dispatch }) => {
     
     try {
       // Local development:
-      const response = await fetch('http://localhost:5000/api/email/send-quote', {
+      // const response = await fetch('http://localhost:5000/api/email/send-quote', {
       
       // Production:
-      // const response = await fetch('https://alco-aluminium-scaffolding-backend.onrender.com/api/email/send-quote', {
+      const response = await fetch('https://alco-aluminium-scaffolding-backend-5ucb.onrender.com/api/email/send-quote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -562,10 +562,10 @@ const ContactUs = () => {
     {
       icon: FiMail,
       title: 'Email',
-      primary: 'alcoaaluminiumscaffolding1@gmail.com',
-      // secondary: 'alcoaaluminiumscaffolding1@gmail.com',
+      primary: 'Sales@alcoascaffolding.com',
+      // secondary: 'Sales@alcoascaffolding.com',
       description: '24/7 response within 2 hours',  
-      action: 'mailto:alcoaaluminiumscaffolding1@gmail.com'
+      action: 'mailto:Sales@alcoascaffolding.com'
     },
     {
       icon: FiMapPin,
@@ -590,7 +590,7 @@ const ContactUs = () => {
       city: 'Abu Dhabi',
       address: 'Musaffah, Abu Dhabi, UAE',
       phone: '+971 58 137 5601',
-      email: 'alcoaaluminiumscaffolding1@gmail.com',
+      email: 'Sales@alcoascaffolding.com',
       isHeadquarters: true
     }
   ];
@@ -684,10 +684,10 @@ const ContactUs = () => {
     
     try {
       // Local development:
-      const response = await fetch('http://localhost:5000/api/email/send-contact', {
+      // const response = await fetch('http://localhost:5000/api/email/send-contact', {
       
       // Production:
-      // const response = await fetch('https://alco-aluminium-scaffolding-backend.onrender.com/api/email/send-contact', {
+      const response = await fetch('https://alco-aluminium-scaffolding-backend-5ucb.onrender.com/api/email/send-contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

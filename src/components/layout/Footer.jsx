@@ -74,8 +74,8 @@ const Footer = () => {
     {
       icon: FiMail,
       title: 'Email',
-      details: ['alcoaaluminiumscaffolding1@gmail.com'],
-      link: 'mailto:alcoaaluminiumscaffolding1@gmail.com'
+      details: ['Sales@alcoascaffolding.com'],
+      link: 'mailto:Sales@alcoascaffolding.com'
     },
     {
       icon: FiMapPin,
@@ -109,9 +109,9 @@ const Footer = () => {
 
       <div className="container-custom py-16 relative z-10">
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 mb-16">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div>
             <Link to="/" className="flex items-center space-x-3 mb-6">
               <img 
                 src={logo} 
@@ -125,7 +125,7 @@ const Footer = () => {
                 <p className="text-xs text-text-secondary dark:text-text-secondary-dark">Scaffolding Solutions</p>
               </div> */}
             </Link>
-            <p className="text-gray-600 dark:text-gray-300 text-sm mb-8 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 text-sm mb-8 leading-relaxed text-justify max-w-sm">
               Professional scaffolding solutions in Abu Dhabi, UAE. We deliver safe, reliable, and efficient services for all your construction needs.
             </p>
             <div className="flex space-x-4">
@@ -144,32 +144,25 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-bold text-gray-900 dark:text-white mb-6 text-lg">Quick Links</h4>
-            <div className="space-y-3">
-              <Link to="/about-us" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">About Us</Link>
-              <Link to="/services" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Services</Link>
-              <Link to="/products" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Products</Link>
-              <Link to="/projects" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Projects</Link>
-              <Link to="/safety" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Safety</Link>
+          {/* Quick Links & Contact */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-6 text-lg">Quick Links</h4>
+              <div className="space-y-3">
+                <Link to="/" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Home</Link>
+                <Link to="/about-us" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">About Us</Link>
+                <Link to="/services" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Services</Link>
+                <Link to="/products" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Products</Link>
+                <Link to="/projects" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Projects</Link>
+                <Link to="/branches" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Branches</Link>
+                <Link to="/safety" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Safety</Link>
+                <Link to="/contact-us" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Contact Us</Link>
+              </div>
             </div>
-          </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-bold text-gray-900 dark:text-white mb-6 text-lg">Services</h4>
-            <div className="space-y-3">
-              <Link to="/services/installation" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Installation</Link>
-              <Link to="/services/rental" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Equipment Rental</Link>
-              <Link to="/services/inspections" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Safety Inspections</Link>
-              <Link to="/services/maintenance" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Maintenance</Link>
-              <Link to="/services/training" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors duration-200 hover:translate-x-2">Training</Link>
-            </div>
-          </div>
-
-          {/* Contact */}
-          <div>
+            {/* Contact */}
+            <div>
             <h4 className="font-bold text-gray-900 dark:text-white mb-6 text-lg">Contact</h4>
             <div className="space-y-4 text-sm">
               <div className="flex items-start space-x-3">
@@ -188,8 +181,8 @@ const Footer = () => {
                   <FiMail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <a href="mailto:alcoaaluminiumscaffolding1@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium break-all">
-                    alcoaaluminiumscaffolding1@gmail.com
+                  <a href="mailto:Sales@alcoascaffolding.com" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium break-all">
+                    Sales@alcoascaffolding.com
                   </a>
                   <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">24/7 Response</p>
                 </div>
@@ -206,26 +199,15 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 dark:border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div className="text-sm text-gray-500 dark:text-gray-400 mb-4 md:mb-0">
+          <div className="text-center">
+            <div className="text-sm text-gray-500 dark:text-gray-400">
               <p>
                 © {currentYear} Alcoa Aluminium Scaffolding. All rights reserved.
               </p>
-            </div>
-            
-            <div className="flex items-center space-x-8 text-sm">
-              <Link to="/privacy-policy" className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/sitemap" className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                Sitemap
-              </Link>
             </div>
           </div>
         </div>

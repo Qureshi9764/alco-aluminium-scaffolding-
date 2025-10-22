@@ -119,7 +119,7 @@ EMAIL_PASS=your-16-char-app-password
 PORT=5000
 NODE_ENV=development
 FRONTEND_URL=http://localhost:5173
-EMAIL_USER=alcoaaluminiumscaffolding1@gmail.com
+EMAIL_USER=Sales@alcoascaffolding.com
 EMAIL_PASS=abcdefghijklmnop
 ```
 
@@ -401,7 +401,7 @@ If you encounter any issues:
 4. Verify all environment variables are correct
 
 For additional help:
-- Email: alcoaaluminiumscaffolding1@gmail.com
+- Email: Sales@alcoascaffolding.com
 - Check backend logs: `npm run dev` (shows detailed errors)
 
 ---

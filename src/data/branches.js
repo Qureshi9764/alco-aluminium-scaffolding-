@@ -15,7 +15,7 @@ export const branchesData = [
     contact: {
       phone: '+971 58 137 5601',
       fax: '+971 58 137 5602',
-      email: 'alcoaaluminiumscaffolding1@gmail.com',
+      email: 'Sales@alcoascaffolding.com',
       manager: 'Syed Tawakal',
       managerTitle: 'Regional Director'
     },
