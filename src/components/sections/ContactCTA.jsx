@@ -26,7 +26,7 @@ const ContactCTA = () => {
       icon: FiPhone,
       title: 'Call Us',
       description: 'Speak with our experts',
-      action: '+971 58 137 5601',
+      action: '+971 58 137 5601 | +971 50 926 8038',
       link: 'tel:+971581375601',
       available: 'Mon-Fri 7AM-6PM'
     },

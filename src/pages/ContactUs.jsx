@@ -555,7 +555,7 @@ const ContactUs = () => {
       icon: FiPhone,
       title: 'Phone',
       primary: '+971 58 137 5601',
-      // secondary: '+971 58 137 5601',
+      secondary: '+971 50 926 8038',
       description: 'Mon-Fri 7AM-6PM, Sat 8AM-4PM',
       action: 'tel:+971581375601'
     },
@@ -579,9 +579,9 @@ const ContactUs = () => {
       icon: FiClock,
       title: 'Emergency',
       primary: '24/7 Emergency Hotline',
-      // secondary: '+971 58 137 5601',
+      secondary: '+971 50 926 8038',
       description: 'Urgent scaffolding support',
-      action: 'tel:+971581375601'
+      action: 'tel:+971509268038'
     }
   ];
 
@@ -590,6 +590,7 @@ const ContactUs = () => {
       city: 'Abu Dhabi',
       address: 'Musaffah, Abu Dhabi, UAE',
       phone: '+971 58 137 5601',
+      phone2: '+971 50 926 8038',
       email: 'Sales@alcoascaffolding.com',
       isHeadquarters: true
     }
@@ -942,6 +943,14 @@ const ContactUs = () => {
                           {office.phone}
                         </a>
                       </p>
+                      {office.phone2 && (
+                        <p>
+                          <FiPhone className="w-4 h-4 inline mr-2" />
+                          <a href={`tel:${office.phone2}`} className="hover:text-primary-600 dark:hover:text-primary-400">
+                            {office.phone2}
+                          </a>
+                        </p>
+                      )}
                       <p>
                         <FiMail className="w-4 h-4 inline mr-2" />
                         <a href={`mailto:${office.email}`} className="hover:text-primary-600 dark:hover:text-primary-400">

@@ -140,12 +140,22 @@ const Branches = () => {
           <div className="space-y-2 mb-4">
             <div className="flex items-center space-x-3">
               <FiPhone className="w-4 h-4 text-brand-primary-500" />
-              <a 
-                href={`tel:${branch.contact.phone}`}
-                className="text-text-secondary dark:text-text-secondary-dark hover:text-brand-primary-600 transition-colors"
-              >
-                {branch.contact.phone}
-              </a>
+              <div className="flex flex-col">
+                <a 
+                  href={`tel:${branch.contact.phone}`}
+                  className="text-text-secondary dark:text-text-secondary-dark hover:text-brand-primary-600 transition-colors"
+                >
+                  {branch.contact.phone}
+                </a>
+                {branch.contact.phone2 && (
+                  <a 
+                    href={`tel:${branch.contact.phone2}`}
+                    className="text-text-secondary dark:text-text-secondary-dark hover:text-brand-primary-600 transition-colors"
+                  >
+                    {branch.contact.phone2}
+                  </a>
+                )}
+              </div>
             </div>
             <div className="flex items-center space-x-3">
               <FiMail className="w-4 h-4 text-brand-primary-500" />

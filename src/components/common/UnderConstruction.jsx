@@ -49,6 +49,7 @@ const UnderConstruction = ({
                 <div className="text-left">
                   <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
                   <p className="font-semibold text-gray-900 dark:text-white">+971 58 137 5601</p>
+                  <p className="font-semibold text-gray-900 dark:text-white">+971 50 926 8038</p>
                 </div>
               </div>
               <div className="flex items-center justify-center space-x-3 p-4 bg-white dark:bg-gray-900 rounded-xl">

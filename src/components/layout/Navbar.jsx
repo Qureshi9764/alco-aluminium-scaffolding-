@@ -108,7 +108,7 @@ const Navbar = () => {
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <FiPhone className="w-4 h-4" />
-                <span>+971 58 137 5601</span>
+                <span>+971 58 137 5601 | +971 50 926 8038</span>
               </div>
               <div className="flex items-center space-x-2">
                 <FiMail className="w-4 h-4" />

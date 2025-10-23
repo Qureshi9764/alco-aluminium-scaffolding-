@@ -170,8 +170,11 @@ const Footer = () => {
                   <FiPhone className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <a href="tel:+971581375601" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
+                  <a href="tel:+971581375601" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
                     +971 58 137 5601
+                  </a>
+                  <a href="tel:+971509268038" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
+                    +971 50 926 8038
                   </a>
                   <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Mon-Fri 7AM-6PM</p>
                 </div>
