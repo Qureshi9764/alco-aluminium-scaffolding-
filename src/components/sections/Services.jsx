@@ -15,7 +15,7 @@ import cantileverScaffolding from '../../assets/CANTILEVER SCAFFOLDING.png';
 import maintenanceImg from '../../assets/DSC_4730-2-scaled.jpg';
 import safetyImg from '../../assets/DSC_4738-200x300.jpg';
 import trainingImg from '../../assets/DSC_4753-copy-200x300.jpg';
-import deliveryImg from '../../assets/DSC_4789-200x300.jpg';
+import deliveryImg from '../../assets/scaffolding delivery.jpg';
 import aluminiumPlatform from '../../assets/ALUMINIUM-PLATFORM-LADDER-.jpg';
 import warehouseLadder from '../../assets/WARE-HOUSE-LADDER.png';
 import fiberglassLadder from '../../assets/fiberglass-straight-scaled.jpg';

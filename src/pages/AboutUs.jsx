@@ -173,7 +173,7 @@ const AboutUs = () => {
               </h2>
               <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
-                  Founded in 2008 by Syed Tawakal, Alcoa Aluminium Scaffolding began as a 
+                  Founded in 2008 by Syed Babu Jani, Alcoa Aluminium Scaffolding began as a 
                   small family business with a big vision: to revolutionize the scaffolding 
                   industry in UAE through innovative solutions and unwavering commitment to safety.
                 </p>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import deliveryImg from '../../assets/DSC_4789-200x300.jpg';
+import deliveryImg from '../../assets/scaffolding delivery.jpg';
 
 const ScaffoldingDelivery = () => {
   return (
