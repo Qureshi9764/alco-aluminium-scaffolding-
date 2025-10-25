@@ -42,9 +42,9 @@ const Features = () => {
     {
       icon: FiUsers,
       title: 'Expert Team',
-      description: 'Certified professionals with extensive training in scaffolding installation, maintenance, and safety.',
+      description: 'Professional team with extensive training in scaffolding installation, maintenance, and safety.',
       color: 'bg-indigo-100 text-indigo-600',
-      stats: 'Certified Pros'
+      stats: 'Expert Pros'
     },
     {
       icon: FiThumbsUp,

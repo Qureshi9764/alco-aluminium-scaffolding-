@@ -32,7 +32,7 @@ const [showUnderConstruction, setShowUnderConstruction] = useState(false);
   const safetyStats = [
     { number: '0', label: 'Major Incidents', sublabel: 'Since 2008' },
     { number: '100%', label: 'Compliance Rate', sublabel: 'All projects' },
-    { number: '50+', label: 'Certified Staff', sublabel: 'Safety trained' },
+    { number: '50+', label: 'Trained Staff', sublabel: 'Safety trained' },
     { number: '24/7', label: 'Safety Support', sublabel: 'Always available' }
   ];
 
@@ -41,28 +41,28 @@ const [showUnderConstruction, setShowUnderConstruction] = useState(false);
       code: 'AS/NZS 1576.1',
       title: 'Scaffolding - General requirements',
       description: 'Primary UAE standard for scaffolding design, construction, and use.',
-      compliance: 'Fully Compliant',
+      compliance: 'Compliant',
       icon: FiShield
     },
     {
       code: 'AS/NZS 1576.2',
       title: 'Scaffolding - Couplers and fittings',
       description: 'Standards for scaffolding couplers, fittings, and accessories.',
-      compliance: 'Fully Compliant',
+      compliance: 'Compliant',
       icon: FiCheckCircle
     },
     {
       code: 'AS/NZS 1576.3',
       title: 'Scaffolding - Prefabricated and tube-and-coupler',
       description: 'Requirements for prefabricated scaffolding systems.',
-      compliance: 'Fully Compliant',
+      compliance: 'Compliant',
       icon: FiAward
     },
     {
       code: 'WHS Regulations',
       title: 'Work Health and Safety',
       description: 'Comprehensive workplace health and safety compliance.',
-      compliance: 'Certified',
+      compliance: 'Compliant',
       icon: FiUsers
     }
   ];
@@ -118,25 +118,25 @@ const [showUnderConstruction, setShowUnderConstruction] = useState(false);
     {
       course: 'Basic Scaffolding Safety',
       duration: '1 Day',
-      certification: 'Industry Recognized',
+      certification: 'Industry Training',
       topics: ['Safety regulations', 'PPE usage', 'Basic inspection', 'Emergency procedures']
     },
     {
       course: 'Advanced Scaffolding Operations',
       duration: '3 Days',
-      certification: 'Professional Certificate',
+      certification: 'Professional Training',
       topics: ['Complex installations', 'Load calculations', 'Risk assessment', 'Team leadership']
     },
     {
-      course: 'Safety Inspector Certification',
+      course: 'Safety Inspector Training',
       duration: '5 Days',
-      certification: 'Official Certification',
+      certification: 'Official Training',
       topics: ['Inspection protocols', 'Compliance auditing', 'Report writing', 'Legal requirements']
     },
     {
       course: 'Emergency Response Training',
       duration: '2 Days',
-      certification: 'First Aid Certified',
+      certification: 'First Aid Training',
       topics: ['Emergency procedures', 'First aid', 'Evacuation protocols', 'Incident reporting']
     }
   ];

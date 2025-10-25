@@ -28,7 +28,7 @@ const ContactCTA = () => {
       description: 'Speak with our experts',
       action: '+971 58 137 5601 | +971 50 926 8038',
       link: 'tel:+971581375601',
-      available: 'Mon-Fri 7AM-6PM'
+      available: 'Monday-Saturday, 8am-6pm'
     },
     {
       icon: FiMail,
@@ -44,7 +44,7 @@ const ContactCTA = () => {
       description: 'See our equipment',
       action: 'Musaffah, Abu Dhabi',
       link: 'https://maps.google.com',
-      available: 'Mon-Fri 8AM-5PM'
+      available: 'Monday-Saturday, 8am-6pm'
     }
   ];
 

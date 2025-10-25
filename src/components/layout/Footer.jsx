@@ -86,7 +86,7 @@ const Footer = () => {
     {
       icon: FiClock,
       title: 'Business Hours',
-      details: ['Mon - Fri: 7:00 AM - 6:00 PM', 'Sat: 8:00 AM - 4:00 PM'],
+      details: ['Monday-Saturday, 8am-6pm'],
       link: null
     }
   ];
@@ -176,7 +176,7 @@ const Footer = () => {
                   <a href="tel:+971509268038" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
                     +971 50 926 8038
                   </a>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Mon-Fri 7AM-6PM</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Monday-Saturday, 8am-6pm</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">

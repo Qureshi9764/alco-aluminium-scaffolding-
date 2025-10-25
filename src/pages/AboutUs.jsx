@@ -57,11 +57,6 @@ const AboutUs = () => {
       description: 'Expanded operations across UAE with offices in major cities.'
     },
     {
-      year: '2020',
-      title: 'Innovation Award',
-      description: 'Received industry recognition for innovative scaffolding solutions and safety practices.'
-    },
-    {
       year: '2023',
       title: 'Sustainable Practices',
       description: 'Launched eco-friendly initiatives and sustainable scaffolding practices.'
@@ -95,41 +90,30 @@ const AboutUs = () => {
     {
       name: 'Syed Tawakal',
       role: 'CEO & Founder',
-      experience: '20+ years',
       specialization: 'Strategic Leadership',
       image: 'syed-tawakal'
     },
     {
-      name: 'Syed Tawakal',
-      role: 'Operations Director',
-      experience: '15+ years',
-      specialization: 'Project Management',
-      image: 'syed-tawakal'
+      name: 'Syed Babu Jani',
+      role: 'Director',
+      experience: '20 years',
+      specialization: 'Operations Management',
+      image: 'syed-babu-jani'
     },
     {
       name: 'Syed Tawakal',
       role: 'Safety Director',
-      experience: '18+ years',
       specialization: 'Safety & Compliance',
       image: 'syed-tawakal'
     },
     {
-      name: 'Syed Tawakal',
+      name: 'Syed Nouman',
       role: 'Technical Manager',
-      experience: '12+ years',
       specialization: 'Engineering Solutions',
-      image: 'syed-tawakal'
+      image: 'syed-nouman'
     }
   ];
 
-  const certifications = [
-    'AS/NZS 1576.1 Scaffolding Standard',
-    'WorkSafe UAE Certified',
-    'ISO 9001 Quality Management',
-    'ISO 14001 Environmental Management',
-    'OHSAS 18001 Safety Management',
-    'Master Builders Association Member'
-  ];
 
   return (
     <div className="min-h-screen bg-surface-light dark:bg-surface-dark transition-theme">
@@ -392,66 +376,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-                Certifications & Compliance
-              </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-                We maintain the highest industry standards through rigorous certification 
-                processes and ongoing compliance monitoring.
-              </p>
-
-              <div className="space-y-3">
-                {certifications.map((cert, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-center space-x-3"
-                  >
-                    <FiCheck className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-800 dark:text-gray-300 font-medium">{cert}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-2 gap-6"
-            >
-              {/* Certification Badges */}
-              {[
-                { name: 'Safety First', icon: FiShield, color: 'bg-green-100 text-green-600' },
-                { name: 'Quality Assured', icon: FiAward, color: 'bg-blue-100 text-blue-600' },
-                { name: 'Fully Licensed', icon: FiCheck, color: 'bg-purple-100 text-purple-600' },
-                { name: 'Insured', icon: FiShield, color: 'bg-orange-100 text-orange-600' }
-              ].map((badge, index) => (
-                <div key={index} className="card text-center">
-                  <div className={`w-16 h-16 ${badge.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <badge.icon className="w-8 h-8" />
-                  </div>
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">{badge.name}</h4>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-primary-600 to-accent-600 text-white py-16">

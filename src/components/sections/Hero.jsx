@@ -197,18 +197,6 @@ const Hero = () => {
                   </div>
                 </div>
 
-                {/* Aluminium Grade Card - Bottom Left */}
-                <div className="absolute bottom-2 xs:bottom-3 sm:bottom-4 left-2 xs:left-3 sm:left-4 bg-white rounded-lg shadow-lg p-1.5 xs:p-2 sm:p-3 border border-gray-200 z-20">
-                  <div className="flex items-center space-x-1.5 xs:space-x-2 sm:space-x-3">
-                    <div className="w-5 h-5 xs:w-6 xs:h-6 sm:w-8 sm:h-8 bg-green-500 rounded-lg flex items-center justify-center">
-                      <FiCheck className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4 text-white" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-gray-900">Aluminium Grade</div>
-                      <div className="text-xs text-gray-600">6061-T6 Certified</div>
-                    </div>
-                  </div>
-                </div>
                 
                 {/* Clean Scaffolding Structure - Center */}
                 <div className="absolute inset-0 flex items-center justify-center p-2 xs:p-4 sm:p-6 lg:p-8 z-0">

@@ -36,12 +36,12 @@ export const branchesData = [
       'Ladder Manufacturers'
     ],
     hours: {
-      monday: '7:00 AM - 6:00 PM',
-      tuesday: '7:00 AM - 6:00 PM',
-      wednesday: '7:00 AM - 6:00 PM',
-      thursday: '7:00 AM - 6:00 PM',
-      friday: '7:00 AM - 6:00 PM',
-      saturday: '8:00 AM - 4:00 PM',
+      monday: '8am - 6pm',
+      tuesday: '8am - 6pm',
+      wednesday: '8am - 6pm',
+      thursday: '8am - 6pm',
+      friday: '8am - 6pm',
+      saturday: '8am - 6pm',
       sunday: 'Emergency Only'
     },
     specialties: ['High-rise Projects', 'Industrial Constructions', 'Marine Scaffolding'],

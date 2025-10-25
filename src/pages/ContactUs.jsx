@@ -556,7 +556,7 @@ const ContactUs = () => {
       title: 'Phone',
       primary: '+971 58 137 5601',
       secondary: '+971 50 926 8038',
-      description: 'Mon-Fri 7AM-6PM, Sat 8AM-4PM',
+      description: 'Monday-Saturday, 8am-6pm',
       action: 'tel:+971581375601'
     },
     {

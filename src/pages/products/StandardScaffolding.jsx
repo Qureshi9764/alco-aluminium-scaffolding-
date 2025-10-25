@@ -28,7 +28,7 @@ const StandardScaffolding = () => {
   ];
 
   const specifications = {
-    'Material': 'High-grade aluminum alloy 6061-T6',
+    'Material': 'High-grade aluminum alloy',
     'Load Capacity': '250kg/m² (live load)',
     'Heights Available': '2m to 20m in 2m increments',
     'Bay Widths': '1.2m, 1.5m, 2.0m',
@@ -121,7 +121,7 @@ const StandardScaffolding = () => {
               <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
                 <div className="flex items-center space-x-3">
                   <FiShield className="w-6 h-6 text-green-500" />
-                  <span className="text-text-secondary dark:text-text-secondary-dark">Safety Certified</span>
+                  <span className="text-text-secondary dark:text-text-secondary-dark">Safety First</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <FiClock className="w-6 h-6 text-blue-500" />

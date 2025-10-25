@@ -161,24 +161,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* Floating Elements */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 1.2 }}
-              className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-surface-light dark:bg-surface-muted-dark rounded-xl shadow-lg p-2 sm:p-4 border border-border-light dark:border-border-dark"
-            >
-              <div className="flex items-center space-x-2 sm:space-x-3">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent-100 rounded-lg flex items-center justify-center">
-                  <FiAward className="w-4 h-4 sm:w-5 sm:h-5 text-accent-600" />
-                </div>
-                <div>
-                  <div className="text-xs sm:text-sm font-semibold text-text-primary dark:text-text-primary-dark">Certified</div>
-                  <div className="text-xs text-text-secondary dark:text-text-secondary-dark">Industry Standards</div>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
